@@ -14,3 +14,11 @@ class Post(models.Model):
     status = models.IntegerField(choices=POST_STATUS, default=0)
     approval_status = models.IntegerField(choices=APPROVAL_STATUS, default=0)
     modified_on = models.DateTimeField(auto_now=True)
+
+class PostComment(models.Model):
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name="comments")
+    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="commenter")
+    body = models.TextField()
+    approval_status = models.IntegerField(choices=APPROVAL_STATUS, default=0)
+    commented_on = models.DateTimeField(auto_now_add=True)
+    modified_on = models.DateTimeField(auto_now=True)
