@@ -23,6 +23,7 @@ from recipes.views import my_recipes
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('summernote/', include('django_summernote.urls')),
     path("", include("blog.urls"), name="blog-urls"),
     path('about/', my_about_me, name="about"),
     path('recipes/', my_recipes, name="recipes")
