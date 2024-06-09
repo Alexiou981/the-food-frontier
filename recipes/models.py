@@ -25,3 +25,13 @@ class Recipe(models.Model):
     approval_status = models.IntegerField(choices=APPROVAL_STATUS, default=0)
     created_on = models.DateTimeField(auto_now_add=True)
     modified_on = models.DateTimeField(auto_now=True)
+
+
+class RecipeComment(models.Model):
+    post = models.ForeignKey(Recipe, on_delete=models.CASCADE, related_name="comments")
+    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="commentor")
+    body = models.TextField()
+    approval_status = models.IntegerField(choices=APPROVAL_STATUS, default=0)
+    created_on = models.DateTimeField(auto_now_add=True)
+    modified_on = models.DateTimeField(auto_now=True)
+    
