@@ -17,6 +17,7 @@ CUISINE = (
 
 class Recipe(models.Model):
     title = models.CharField(max_length=200, unique=True)
+    excerpt = models.TextField(blank=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="recipes")
     ingredients = models.TextField()
     instructions = models.TextField()
