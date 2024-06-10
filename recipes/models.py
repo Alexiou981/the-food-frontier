@@ -13,7 +13,7 @@ CUISINE = (
     (5, "African"),
     (6, "American"),
     (7, "Latin-American"),
-    (8, "Carribean"))
+    (8, "Caribbean"))
 
 class Recipe(models.Model):
     title = models.CharField(max_length=200, unique=True)
