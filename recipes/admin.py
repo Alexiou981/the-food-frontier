@@ -10,7 +10,7 @@ class RecipeAdmin(SummernoteModelAdmin):
     list_display = ('title', 'author', 'cuisine', 'status')
     search_fields = ['title']
     list_filter = ('status',)
-    summernote_fields = ('instructions', 'ingredients',)
+    summernote_fields = ('instructions', 'ingredients', 'excerpt')
 
 @admin.register(RecipeComment)
 class RecipeCommentAdmin(SummernoteModelAdmin):
