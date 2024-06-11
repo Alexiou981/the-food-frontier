@@ -12,4 +12,8 @@ class RecipeAdmin(SummernoteModelAdmin):
     list_filter = ('status',)
     summernote_fields = ('instructions', 'ingredients', 'excerpt')
 
-admin.site.register(RecipeComment)
+@admin.register(RecipeComment)
+class RecipeComment(SummernoteModelAdmin):
+
+    list_display = ('body', 'approval_status')
+    list_filter = ('approval_status',)
