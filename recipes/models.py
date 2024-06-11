@@ -27,6 +27,12 @@ class Recipe(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     modified_on = models.DateTimeField(auto_now=True)
 
+    class Meta:
+        ordering = ["-created_on"]
+
+    def __str__(self):
+        return f'{self.title}'
+
 
 class RecipeComment(models.Model):
     post = models.ForeignKey(Recipe, on_delete=models.CASCADE, related_name="comments")
@@ -35,4 +41,10 @@ class RecipeComment(models.Model):
     approval_status = models.IntegerField(choices=APPROVAL_STATUS, default=0)
     created_on = models.DateTimeField(auto_now_add=True)
     modified_on = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ["-created_on"]
+
+    def __str__(self):
+        return f'{self.body} commented by {self.author}'
     
