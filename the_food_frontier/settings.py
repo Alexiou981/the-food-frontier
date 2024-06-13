@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-c7scnz!5^#wvk9i2naz$r@r7$7f9sam0!h_c3s2#jp_&j0mz&t
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-alexiou981-thefoodfront-lk60frh9r58.ws-eu114.gitpod.io', '.herokuapp.com']
+ALLOWED_HOSTS = ['8000-alexiou981-thefoodfront-fn8ke887xyk.ws.codeinstitute-ide.net', '.herokuapp.com']
 
 
 # Application definition
@@ -93,6 +93,7 @@ DATABASES = {
 }
 
 CSRF_TRUSTED_ORIGINS = [
+    "https://*.codeinstitute-ide.net",
     "https://*.gitpod.io",
     "https://*.herokuapp.com"
 ]
