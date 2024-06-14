@@ -1,1 +1,1 @@
-web: gunicorn the-food-frontier.wsgi
+web: gunicorn the_food_frontier.wsgi
