@@ -32,6 +32,10 @@ class Recipe(models.Model):
 
     def __str__(self):
         return f'{self.title}'
+        return f'{self.cuisine}'
+    
+
+    
 
 
 class RecipeComment(models.Model):
