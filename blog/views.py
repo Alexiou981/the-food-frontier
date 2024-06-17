@@ -10,6 +10,7 @@ class PostList(generic.ListView):
     template_name = 'blog/index.html'
 
 
+# Function taken from the CI Walktrhough for Codestar project 
 def post_detail(request, slug):
     """
     Display an individual :model:`blog.Post`.
