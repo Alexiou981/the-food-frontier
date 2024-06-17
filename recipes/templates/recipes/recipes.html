@@ -16,12 +16,11 @@
                     <div class="card mb-4">
                         <div class="card-body">
                             <div class="image-container">
-                                <div class="image-flash">
-                                    <p class="author">Author: {{ recipe.author }}</p>
-                                </div>
+                                
                             </div>
                             <a href="{% url 'recipes_detail' recipe.slug %}" class="post-link">
                                 <h2 class="card-title">{{ recipe.title }}</h2>
+                                <p>Author: {{ recipe.author }}</p>
                             </a>
 
                             <hr />
