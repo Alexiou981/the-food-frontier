@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 from django.views import generic
 from .models import Recipe
@@ -8,3 +8,27 @@ from .models import Recipe
 class RecipeList(generic.ListView):
     queryset = Recipe.objects.all()
     template_name = 'recipes/recipes.html'
+
+
+def recipes_detail(request, slug):
+    """
+    Display an individual :model:`blog.Post`.
+
+    **Context**
+
+    ``post``
+        An instance of :model:`blog.Post`.
+
+    **Template:**
+
+    :template:`blog/post_detail.html`
+    """
+
+    queryset = Recipe.objects.filter(approval_status=1)
+    recipe = get_object_or_404(queryset, slug=slug)
+
+    return render(
+        request,
+        "recipes/recipes_detail.html",
+        {"recipe": recipe},
+    )
