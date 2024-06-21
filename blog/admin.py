@@ -11,5 +11,10 @@ class PostAdmin(SummernoteModelAdmin):
     summernote_fields = ('content',)
 
 
-admin.site.register(PostComment)
+@admin.register(PostComment)
+class PostCommentAdmin(SummernoteModelAdmin):
+
+    list_display = ('body', 'author', 'approval_status')
+    search_fields = ['body']
+    list_filter = ('approval_status',)
 
