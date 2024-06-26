@@ -161,3 +161,9 @@ body {
 .approval {
     color: rgb(222, 146, 168);
 }
+
+
+/* style rule for page counter if page is paginated */
+.page-counter {
+    display: flex;
+}

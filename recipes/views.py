@@ -8,6 +8,7 @@ from .models import Recipe
 class RecipeList(generic.ListView):
     queryset = Recipe.objects.all()
     template_name = 'recipes/recipes.html'
+    paginate_by = 6
 
 
 def recipes_detail(request, slug):
