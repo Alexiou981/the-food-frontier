@@ -18,7 +18,6 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('title', models.CharField(max_length=200, unique=True)),
-                ('cuisine', models.IntegerField(choices=[(0, 'International'), (1, 'Mediterranean'), (2, 'Asian'), (3, 'Middle-Eastern'), (4, 'European'), (5, 'African'), (6, 'American'), (7, 'Latin-American'), (8, 'Caribbean')], default=0)),
                 ('ingredients', models.TextField()),
                 ('instructions', models.TextField()),
                 ('approval_status', models.IntegerField(choices=[(0, 'Not-Approved'), (1, 'Approved')], default=0)),
