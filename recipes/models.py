@@ -53,3 +53,13 @@ class RecipeComment(models.Model):
     def __str__(self):
         return f'{self.body} commented by {self.author}'
     
+
+class UsersRecipe(models.Model):
+    title = models.CharField(max_length=200, unique=True)
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    cuisine = models.IntegerField(choices=CUISINE, default=0)
+    ingredients = models.TextField()
+    instructions = models.TextField()
+    approval_status = models.IntegerField(choices=APPROVAL_STATUS, default=0)
+    created_on = models.DateTimeField(auto_now_add=True)
+    modified_on = models.DateTimeField(auto_now=True)
