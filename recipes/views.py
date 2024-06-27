@@ -1,7 +1,8 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 from django.views import generic
-from .models import Recipe
+from .models import Recipe, UsersRecipe
+from .forms import RecipeForm
 
 # Create your views here.
 
@@ -32,4 +33,16 @@ def recipes_detail(request, slug):
         request,
         "recipes/recipes_detail.html",
         {"recipe": recipe},
+    )
+
+
+def users_recipe(request):
+    recipe_form = RecipeForm()
+
+    return render(
+        request,
+        "recipes/recipe_form.html",
+        {
+            "recipe_form": recipe_form
+        }
     )
