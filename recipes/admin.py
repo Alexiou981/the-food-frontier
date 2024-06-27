@@ -22,4 +22,4 @@ class RecipeComment(SummernoteModelAdmin):
 @admin.register(UsersRecipe)
 class UsersRecipeAdmin(admin.ModelAdmin):
 
-    list_display = ('title', 'author', 'ingredients', 'instructions', 'approval_status')
+    list_display = ('title', 'author', 'cuisine', 'ingredients', 'instructions', 'approval_status')
