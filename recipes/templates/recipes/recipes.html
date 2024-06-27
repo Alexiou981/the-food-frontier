@@ -1,7 +1,7 @@
 <!-- Template taken from Code Institute walktrhough Codestar project -->
  
 {% extends "base.html" %}
-
+{% url 'recipe_form' as recipe_form_url %}
 {% block content %}
 
 <!-- index.html content starts here -->
@@ -58,6 +58,10 @@
         </ul>
     </nav>
     {% endif %}
+    <div class="create-recipe-question">
+    <h2>Fancy in creating your own?</h2>
+    <p><a href="{% url 'recipe_form' %}">Click here</a> to add yours.</p>
+    </div>
 </div>
 
 <!-- index.html content ends here -->
