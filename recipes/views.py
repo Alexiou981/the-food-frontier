@@ -1,8 +1,8 @@
 from django.shortcuts import render, get_object_or_404
+from django.contrib import messages
 from django.http import HttpResponse
 from django.views import generic
-from .models import Recipe, UsersRecipe
-from .forms import RecipeForm
+from .models import Recipe
 
 # Create your views here.
 
@@ -37,6 +37,13 @@ def recipes_detail(request, slug):
 
 
 def users_recipe(request):
+
+    if request.method == "POST":
+        recipe_form = RecipeForm(data=request.POST)
+        if recipe_form.is_valid():
+            recipe_form.save()
+            messages.add_message(request, messages.SUCCESS,
+            "Recipe submitted and is awaiting for approval")
     recipe_form = RecipeForm()
 
     return render(

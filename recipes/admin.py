@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Recipe, RecipeComment, UsersRecipe
+from .models import Recipe, RecipeComment
 from django_summernote.admin import SummernoteModelAdmin
 
 # Register your models here.
@@ -19,7 +19,3 @@ class RecipeComment(SummernoteModelAdmin):
     list_filter = ('approval_status',)
 
 
-@admin.register(UsersRecipe)
-class UsersRecipeAdmin(admin.ModelAdmin):
-
-    list_display = ('title', 'author', 'cuisine', 'ingredients', 'instructions', 'approval_status')
