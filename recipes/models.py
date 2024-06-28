@@ -36,9 +36,6 @@ class Recipe(models.Model):
         return f'{self.cuisine}'
     
 
-    
-
-
 class RecipeComment(models.Model):
     post = models.ForeignKey(Recipe, on_delete=models.CASCADE, related_name="comments")
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="commentor")
