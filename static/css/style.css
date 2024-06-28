@@ -172,3 +172,8 @@ body {
     flex-direction: column;
     align-items: center;
 }
+
+/* style rule for recipes pending to be approved */
+.pending-recipes {
+    background-color: rgba(118, 118, 118, 0.883);
+}
