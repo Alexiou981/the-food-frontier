@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.http import HttpResponse
 from django.views import generic
 from .models import Recipe
+from .forms import RecipeForm
 
 # Create your views here.
 
