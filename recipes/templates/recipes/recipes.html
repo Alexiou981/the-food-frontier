@@ -1,5 +1,5 @@
 <!-- Template taken from Code Institute walktrhough Codestar project -->
- 
+
 {% extends "base.html" %}
 {% url 'recipe_form' as recipe_form_url %}
 {% block content %}
@@ -14,21 +14,20 @@
                 {% for recipe in recipe_list %}
                 <div class="col-md-4">
                     <div class="card mb-4">
-                        <div class="card-body">
+                        <div class="card-body{% if not recipe.approval_status and recipe.author == user %} 
+                        d-none{% elif not recipe.approval_status %} pending-recipes{% endif %}">
                             <div class="image-container">
-                                
+
                             </div>
                             <a href="{% url 'recipes_detail' recipe.slug %}" class="post-link">
                                 <h2 class="card-title">{{ recipe.title }}</h2>
                                 <p>Author: {{ recipe.author }}</p>
                             </a>
-
                             <hr />
                             <p class="card-text text-muted h6">Cuisine: {{ recipe.get_cuisine_display }}
                             </p>
                             <hr />
                             <p class="card-text text-muted h6">{{recipe.created_on}}
-                            </p>
                         </div>
                     </div>
                 </div>
@@ -42,7 +41,7 @@
         </div>
     </div>
     {% if is_paginated %}
-    
+
     <nav aria-label="Page navigation">
         <span class="page-counter justify-content-center">
             Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
@@ -58,10 +57,10 @@
         </ul>
     </nav>
     {% endif %}
-    
+
     <div class="create-recipe-question">
-    <h2>Fancy in creating your own?</h2>
-    <p><a href="{% url 'recipe_form' %}">Click here</a> to add yours.</p>
+        <h2>Fancy in creating your own?</h2>
+        <p><a href="{% url 'recipe_form' %}">Click here</a> to add yours.</p>
     </div>
 </div>
 
