@@ -61,12 +61,7 @@
     
     <div class="create-recipe-question">
     <h2>Fancy in creating your own?</h2>
-    {% if user.is_authenticated %}
     <p><a href="{% url 'recipe_form' %}">Click here</a> to add yours.</p>
-    {% else %}
-    <p><span><a href="{% url 'account_login' %}">Login</span></a> 
-    or <span><a href="{% url 'account_signup' %}">Register</a></span> to add yours.</p>
-    {% endif %}
     </div>
 </div>
 
