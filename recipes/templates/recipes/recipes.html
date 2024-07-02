@@ -13,11 +13,10 @@
             <div class="row">
                 {% for recipe in recipe_list %}
                 <div class="col-md-4">
-                    <div class="card mb-4">
-                        <div class="card-body{% if not recipe.approval_status and recipe.author == user %} 
-                        d-none{% elif not recipe.approval_status %} pending-recipes{% endif %}">
+                    <div class="card mb-4 {% if not recipe.approval_status and recipe.author == user %} 
+                    pending-recipes {% elif not recipe.approval_status and recipe.author != user %} d-none {% endif %}">
+                        <div class="card-body">
                             <div class="image-container">
-
                             </div>
                             <a href="{% url 'recipes_detail' recipe.slug %}" class="post-link">
                                 <h2 class="card-title">{{ recipe.title }}</h2>
@@ -34,7 +33,7 @@
                 {% if forloop.counter|divisibleby:3 %}
             </div>
             <div class="row">
-                {% endif %}
+                {% endif %} 
                 {% endfor %}
 
             </div>
