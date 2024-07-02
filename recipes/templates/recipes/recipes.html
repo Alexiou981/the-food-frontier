@@ -23,6 +23,9 @@
                                 <p>Author: {{ recipe.author }}</p>
                             </a>
                             <hr />
+                            {% if not recipe.approval_status and recipe.author == user %}
+                            <p style="color: white"> This repice is awaiting approval.</p>
+                            {% endif %}
                             <p class="card-text text-muted h6">Cuisine: {{ recipe.get_cuisine_display }}
                             </p>
                             <hr />
