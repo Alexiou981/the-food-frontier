@@ -176,4 +176,5 @@ body {
 /* style rule for recipes pending to be approved */
 .pending-recipes {
     background-color: rgba(118, 118, 118, 0.883);
+    pointer-events: none;
 }
