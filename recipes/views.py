@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.http import HttpResponse
 from django.views import generic
 from .models import Recipe
-from .forms import RecipeForm
+from .forms import RecipeForm, strip_html_tags
 
 # Create your views here.
 
@@ -56,3 +56,25 @@ def users_recipe(request):
             "recipe_form": recipe_form
         }
     )
+
+
+def recipe_edit(request, slug):
+    """
+    View to edit recipes
+    """
+    recipe = get_object_or_404(Recipe, slug=slug)
+
+    if request.method == "POST":
+        recipe_form = RecipeForm(data=request.POST, instance=recipe)
+        if recipe_form.is_valid() and recipe.author == request.user:
+            updated_recipe = recipe_form.save(commit=False)
+            updated_recipe.approval_status = False
+            updated_recipe.save()
+            messages.add_message(request, messages.SUCCESS, 'Recipe Updated')
+            return redirect('recipes_detail', slug=slug)
+        else:
+            messages.add_message(request, messages.ERROR, 'Error updating recipe!')
+    else:
+        recipe_form = RecipeForm(instance=recipe)
+
+    return render(request, 'recipes/recipe_form.html', {'recipe_form': recipe_form})

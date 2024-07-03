@@ -23,7 +23,7 @@
     {% if recipe.author == user %}
     <div class="recipe-mod-btns">
         <button class="btn btn-delete">Delete Recipe</button>
-        <button class="btn btn-edit">Edit Recipe</button>
+        <a href="{% url 'recipe_edit' slug=recipe.slug %}" class="btn btn-edit">Edit Recipe</a>
     </div>
     {% endif %}  
     <div class="row">
