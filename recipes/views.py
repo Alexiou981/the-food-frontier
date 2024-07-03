@@ -27,7 +27,7 @@ def recipes_detail(request, slug):
     :template:`blog/post_detail.html`
     """
 
-    queryset = Recipe.objects.filter(approval_status=1)
+    queryset = Recipe.objects.all()
     recipe = get_object_or_404(queryset, slug=slug)
 
     return render(
