@@ -19,7 +19,7 @@ class Recipe(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True, blank=True, null=True)
     excerpt = models.TextField(blank=True)
-    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="recipes")
+    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="recipes", blank=True, null=True)
     ingredients = models.TextField()
     instructions = models.TextField()
     cuisine = models.IntegerField(choices=CUISINE, default=0)
