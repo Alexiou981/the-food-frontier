@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.text import slugify
 from django.contrib.auth.models import User
 from blog.models import POST_STATUS, APPROVAL_STATUS
 
@@ -31,10 +32,19 @@ class Recipe(models.Model):
     class Meta:
         ordering = ["-created_on"]
 
+
     def __str__(self):
         return f'{self.title}'
         return f'{self.cuisine}'
     
+    
+# Function provided by Giancarlo Ventura here:
+# https://stackoverflow.com/questions/70601191/how-to-auto-populate-slug-field-in-django-forms
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.title)
+        super().save(*args, **kwargs)
+
 
 class RecipeComment(models.Model):
     post = models.ForeignKey(Recipe, on_delete=models.CASCADE, related_name="comments")
@@ -44,8 +54,10 @@ class RecipeComment(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     modified_on = models.DateTimeField(auto_now=True)
 
+
     class Meta:
         ordering = ["-created_on"]
+
 
     def __str__(self):
         return f'{self.body} commented by {self.author}'
