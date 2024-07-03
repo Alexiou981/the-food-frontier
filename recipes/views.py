@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib import messages
 from django.http import HttpResponse
 from django.views import generic
@@ -70,11 +70,25 @@ def recipe_edit(request, slug):
             updated_recipe = recipe_form.save(commit=False)
             updated_recipe.approval_status = False
             updated_recipe.save()
-            messages.add_message(request, messages.SUCCESS, 'Recipe Updated')
-            return redirect('recipes_detail', slug=slug)
+            messages.add_message(request, messages.SUCCESS, 'Recipe updated and awaiting approval')
+            return redirect('recipes')
         else:
             messages.add_message(request, messages.ERROR, 'Error updating recipe!')
     else:
         recipe_form = RecipeForm(instance=recipe)
+
+    return render(request, 'recipes/recipe_form.html', {'recipe_form': recipe_form})
+
+
+def recipe_delete(request, slug):
+    """
+    View to delete recipes
+    """
+    recipe = get_object_or_404(Recipe, slug=slug)
+
+    if recipe.author == request.user:
+        recipe.delete()
+        messages
+   
 
     return render(request, 'recipes/recipe_form.html', {'recipe_form': recipe_form})
