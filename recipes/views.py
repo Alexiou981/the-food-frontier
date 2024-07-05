@@ -1,6 +1,6 @@
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
-from django.http import HttpResponse
+from django.http import HttpResponseRedirect
 from django.views import generic
 from .models import Recipe
 from .forms import RecipeForm, strip_html_tags
@@ -84,11 +84,12 @@ def recipe_delete(request, slug):
     """
     View to delete recipes
     """
-    recipe = get_object_or_404(Recipe, slug=slug)
+    recipe_to_delete = Recipe.objects.get(slug=slug)
 
-    if recipe.author == request.user:
-        recipe.delete()
-        messages
-   
-
-    return render(request, 'recipes/recipe_form.html', {'recipe_form': recipe_form})
+    if recipe_to_delete.author == request.user:
+        recipe_to_delete.delete()
+        messages.add_message(request, messages.SUCCESS, 'Recipe deleted successfully!')
+    else:
+        messages.add_message(request, messages.ERROR, 'You can only delete your own recipes.')
+    
+    return HttpResponseRedirect(reverse('recipes'))
