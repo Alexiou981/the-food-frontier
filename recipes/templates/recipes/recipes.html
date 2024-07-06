@@ -12,9 +12,9 @@
         <div class="col-12 mt-3 left">
             <div class="row">
                 {% for recipe in recipe_list %}
+                {% if recipe.approval_status or recipe.author == user %}
                 <div class="col-md-4">
-                    <div class="card mb-4 {% if not recipe.approval_status and recipe.author == user %} 
-                    pending-recipes {% elif not recipe.approval_status and recipe.author != user %} d-none {% endif %}">
+                    <div class="card mb-4 {% if not recipe.approval_status and recipe.author == user %} pending-recipes {% endif %}">
                         <div class="card-body">
                             <div class="image-container">
                             </div>
@@ -24,7 +24,7 @@
                             </a>
                             <hr />
                             {% if not recipe.approval_status and recipe.author == user %}
-                            <p style="color: white"> This repice is awaiting approval.</p>
+                            <p style="color: white"> This recipe is awaiting approval.</p>
                             {% endif %}
                             <p class="card-text text-muted h6">Cuisine: {{ recipe.get_cuisine_display }}
                             </p>
@@ -37,6 +37,7 @@
             </div>
             <div class="row">
                 {% endif %} 
+                {% endif %}
                 {% endfor %}
 
             </div>

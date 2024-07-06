@@ -2,15 +2,32 @@ from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.views import generic
+from django.db.models import Q
 from .models import Recipe
 from .forms import RecipeForm, strip_html_tags
 
 # Create your views here.
 
 class RecipeList(generic.ListView):
-    queryset = Recipe.objects.all()
     template_name = 'recipes/recipes.html'
     paginate_by = 6
+    """ 
+    This fucntion was created with the help of
+    Complex lookups with Q object from the 
+    Django documentation website here:
+    https://docs.djangoproject.com/en/5.0/topics/db/queries/#complex-lookups-with-q-objects
+
+    It ensures that pending recipes only appear to
+    the author of them, and the rest of the users
+    don't get to see the new recipe until it's 
+    approved by the admin.
+    """
+    def get_queryset(self):
+        user = self.request.user
+        if user.is_authenticated:
+            return Recipe.objects.filter(Q(approval_status=1) | Q(author=user))
+        else:
+            return Recipe.objects.filter(approval_status=1)
 
 
 def recipes_detail(request, slug):
