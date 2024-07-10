@@ -8,6 +8,22 @@
  <nav class="users_recipes">
     <a href="{% url 'my_recipes' %}">My Recipes</a>
     <a href="#">My Favourites</a>
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          Filter by Cuisine
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" href="#">International</a></li>
+          <li><a class="dropdown-item" href="#">Mediterranean</a></li>
+          <li><a class="dropdown-item" href="#">Asian</a></li>
+          <li><a class="dropdown-item" href="#">Middle-Eastern</a></li>
+          <li><a class="dropdown-item" href="#">European</a></li>
+          <li><a class="dropdown-item" href="#">African</a></li>
+          <li><a class="dropdown-item" href="#">American</a></li>
+          <li><a class="dropdown-item" href="#">Latin-American</a></li>
+          <li><a class="dropdown-item" href="#">Caribbean</a></li>
+        </ul>
+      </div>
 </nav>
 <div class="container-fluid">
     <div class="row">
