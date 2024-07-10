@@ -30,6 +30,13 @@ class RecipeList(generic.ListView):
             return Recipe.objects.filter(approval_status=1)
 
 
+class MyRecipesList(generic.ListView):
+    template_name = 'recipes/my_recipes.html'
+    paginate_by = 6
+
+    def get_queryset(self):
+        return Recipe.objects.filter(author=self.request.user)
+
 def recipes_detail(request, slug):
     """
     Display an individual :model:`blog.Post`.
