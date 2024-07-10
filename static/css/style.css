@@ -177,3 +177,8 @@ body {
 .pending-recipes {
     background-color: rgba(118, 118, 118, 0.883);
 }
+
+nav.users_recipes{
+    display: flex;
+    justify-content: space-evenly;
+}
