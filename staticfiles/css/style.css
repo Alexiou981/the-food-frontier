@@ -177,3 +177,9 @@ body {
 .pending-recipes {
     background-color: rgba(118, 118, 118, 0.883);
 }
+
+/* style rule for my recipes and my favourites navbar */
+nav.users_recipes{
+    display: flex;
+    justify-content: space-evenly;
+}
