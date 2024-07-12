@@ -1,7 +1,6 @@
 <!-- Template taken from Code Institute walktrhough Codestar project -->
 
 {% extends "base.html" %}
-{% url 'recipe_form' as recipe_form_url %}
 {% block content %}
 
 <!-- index.html content starts here -->
@@ -25,12 +24,14 @@
           </ul>
       </div>
 </nav>
+{% if cuisine_recipes %}
 <div class="container-fluid">
     <div class="row">
         <!-- Blog Entries Column -->
+         <h1 class="d-flex justify-content-center">{{ cuisine.capitalize }} Cuisine</h1>
         <div class="col-12 mt-3 left">
             <div class="row">
-                {% for recipe in recipe_list %}
+                {% for recipe in cuisine_recipes %}
                 {% if recipe.approval_status or recipe.author == user %}
                 <div class="col-md-4">
                     <div class="card mb-4 {% if not recipe.approval_status and recipe.author == user %} pending-recipes {% endif %}">
@@ -41,12 +42,11 @@
                                 <h2 class="card-title">{{ recipe.title }}</h2>
                                 <p>Author: {{ recipe.author }}</p>
                             </a>
-                            <hr />
                             {% if not recipe.approval_status and recipe.author == user %}
+                            <hr />
                             <p style="color: white"> This recipe is awaiting approval.</p>
+                            <hr />
                             {% endif %}
-                            <p class="card-text text-muted h6">Cuisine: {{ recipe.get_cuisine_display }}
-                            </p>
                             <hr />
                             <p class="card-text text-muted h6">{{recipe.created_on}}
                         </div>
@@ -79,12 +79,9 @@
         </ul>
     </nav>
     {% endif %}
-
-    <div class="create-recipe-question">
-        <h2>Fancy in creating your own?</h2>
-        <p><a href="{% url 'recipe_form' %}">Click here</a> to add yours.</p>
-    </div>
 </div>
-
+{% else %}
+    <h2 class="d-flex justify-content-center">Sorry, this cuisine does not have any recipes yet.</h2>
+{% endif %}
 <!-- index.html content ends here -->
 {% endblock %}

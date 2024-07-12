@@ -37,6 +37,29 @@ class MyRecipesList(generic.ListView):
     def get_queryset(self):
         return Recipe.objects.filter(author=self.request.user)
 
+def CuisineView(request, cuisine):
+    """
+    This function was created with the help of Codemy.com
+    in this tutorial: https://www.youtube.com/watch?v=PTsljbR-Cmo&t=197s
+    """
+    CUISINE_CHOICES = {
+        'international': 0,
+        'mediterranean': 1,
+        'asian': 2,
+        'middle-eastern': 3,
+        'european': 4,
+        'african': 5,
+        'american': 6,
+        'latin-american': 7,
+        'caribbean': 8,
+    }
+
+    cuisine_int = CUISINE_CHOICES.get(cuisine.lower())
+    
+    cuisine_recipes = Recipe.objects.filter(cuisine=cuisine_int)
+    return render(request, 'recipes/filtered_cuisines.html', {"cuisine": cuisine, 'cuisine_recipes': cuisine_recipes})
+    
+
 def recipes_detail(request, slug):
     """
     Display an individual :model:`blog.Post`.
