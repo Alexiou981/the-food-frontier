@@ -6,15 +6,14 @@ from blog.models import POST_STATUS, APPROVAL_STATUS
 # Create your models here.
 
 CUISINE = (
-    (0, "International"), 
-    (1, "Mediterranean"), 
-    (2, "Asian"), 
-    (3, "Middle-Eastern"),
-    (4, "European"),
-    (5, "African"),
-    (6, "American"),
-    (7, "Latin-American"),
-    (8, "Caribbean"))
+    (0, "Mediterranean"), 
+    (1, "Asian"), 
+    (2, "Middle-Eastern"),
+    (3, "European"),
+    (4, "African"),
+    (5, "American"),
+    (6, "Latin-American"),
+    (7, "Caribbean"))
 
 class Recipe(models.Model):
     title = models.CharField(max_length=200, unique=True)
