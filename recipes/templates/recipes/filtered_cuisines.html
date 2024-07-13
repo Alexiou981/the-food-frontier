@@ -1,9 +1,7 @@
-<!-- Template taken from Code Institute walktrhough Codestar project -->
-
 {% extends "base.html" %}
 {% block content %}
 
-<!-- index.html content starts here -->
+<!-- filtered_cuisines.html content starts here -->
  <nav class="users_recipes">
     <a href="{% url 'my_recipes' %}" class="btn btn-secondary" type="button"">My Recipes</a>
     <a href="#">My Favourites</a>
@@ -27,7 +25,7 @@
 {% if cuisine_recipes %}
 <div class="container-fluid">
     <div class="row">
-        <!-- Blog Entries Column -->
+        <!-- Recipe Entries Column -->
          <h1 class="d-flex justify-content-center">{{ cuisine.capitalize }} Cuisine</h1>
         <div class="col-12 mt-3 left">
             <div class="row">
@@ -63,7 +61,6 @@
         </div>
     </div>
     {% if is_paginated %}
-
     <nav aria-label="Page navigation">
         <span class="page-counter justify-content-center">
             Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
@@ -83,5 +80,5 @@
 {% else %}
     <h2 class="d-flex justify-content-center">Sorry, this cuisine does not have any recipes yet.</h2>
 {% endif %}
-<!-- index.html content ends here -->
+<!-- filtered_cuisines.html content ends here -->
 {% endblock %}
