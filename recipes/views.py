@@ -43,15 +43,14 @@ def CuisineView(request, cuisine):
     in this tutorial: https://www.youtube.com/watch?v=PTsljbR-Cmo&t=197s
     """
     CUISINE_CHOICES = {
-        'international': 0,
-        'mediterranean': 1,
-        'asian': 2,
-        'middle-eastern': 3,
-        'european': 4,
-        'african': 5,
-        'american': 6,
-        'latin-american': 7,
-        'caribbean': 8,
+        'mediterranean': 0,
+        'asian': 1,
+        'middle-eastern': 2,
+        'european': 3,
+        'african': 4,
+        'american': 5,
+        'latin-american': 6,
+        'caribbean': 7,
     }
 
     cuisine_int = CUISINE_CHOICES.get(cuisine.lower())
