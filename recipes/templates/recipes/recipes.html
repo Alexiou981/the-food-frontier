@@ -1,10 +1,9 @@
-<!-- Template taken from Code Institute walktrhough Codestar project -->
-
 {% extends "base.html" %}
 {% url 'recipe_form' as recipe_form_url %}
 {% block content %}
 
-<!-- index.html content starts here -->
+<!-- recipes.html content starts here -->
+ 
  <nav class="users_recipes">
     <a href="{% url 'my_recipes' %}" class="btn btn-secondary" type="button"">My Recipes</a>
     <a href="#">My Favourites</a>
@@ -27,7 +26,7 @@
 </nav>
 <div class="container-fluid">
     <div class="row">
-        <!-- Blog Entries Column -->
+        <!-- Recipes Entries Column -->
         <div class="col-12 mt-3 left">
             <div class="row">
                 {% for recipe in recipe_list %}
@@ -86,5 +85,5 @@
     </div>
 </div>
 
-<!-- index.html content ends here -->
+<!-- recipes.html content ends here -->
 {% endblock %}

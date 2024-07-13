@@ -1,5 +1,4 @@
 <!-- Template taken from the Code Institute, Codestar repository -->
-
 {% extends 'base.html' %} {% block content %}
 {% load static %}
 
@@ -7,7 +6,7 @@
     <div class="container">
         <div class="row g-0">
             <div class="col-md-4 masthead-text">
-                <!-- Post title goes in these h1 tags -->
+                <!-- About title goes in these h1 tags -->
                 <br>
                 <br>
                 <h1 class="post-title">{{ about.title }}</h1>
@@ -20,12 +19,10 @@
         </div>
     </div>
 </div>
-
 <div class="container">
     <div class="row">
         <div class="col card mb-4  mt-3 left  top">
             <div class="card-body">
-                <!-- The post content goes inside the card-text. -->
                 <!-- Use the | safe filter inside the template tags -->
                 <p class="card-text">
                     {{ about.content | safe }}
@@ -34,5 +31,4 @@
         </div>
     </div>
 </div>
-
 {% endblock content %}
