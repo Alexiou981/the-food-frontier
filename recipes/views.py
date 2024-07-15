@@ -1,4 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.views import generic
@@ -7,8 +9,7 @@ from .models import Recipe
 from .forms import RecipeForm, strip_html_tags
 
 # Create your views here.
-
-class RecipeList(generic.ListView):
+class RecipeList(LoginRequiredMixin, generic.ListView):
     template_name = 'recipes/recipes.html'
     paginate_by = 6
     """ 
@@ -30,13 +31,15 @@ class RecipeList(generic.ListView):
             return Recipe.objects.filter(approval_status=1)
 
 
-class MyRecipesList(generic.ListView):
+class MyRecipesList(LoginRequiredMixin, generic.ListView):
     template_name = 'recipes/my_recipes.html'
     paginate_by = 6
 
     def get_queryset(self):
         return Recipe.objects.filter(author=self.request.user)
 
+
+@login_required
 def CuisineView(request, cuisine):
     """
     This function was created with the help of Codemy.com
@@ -60,6 +63,7 @@ def CuisineView(request, cuisine):
     return render(request, 'recipes/filtered_cuisines.html', {"cuisine": cuisine, 'cuisine_recipes': cuisine_recipes})
     
 
+@login_required
 def recipes_detail(request, slug):
     """
     Display an individual :model:`blog.Post`.
@@ -84,6 +88,7 @@ def recipes_detail(request, slug):
     )
 
 
+@login_required
 def users_recipe(request):
 
     if request.method == "POST":
@@ -105,6 +110,7 @@ def users_recipe(request):
     )
 
 
+@login_required
 def recipe_edit(request, slug):
     """
     View to edit recipes
@@ -127,6 +133,7 @@ def recipe_edit(request, slug):
     return render(request, 'recipes/recipe_form.html', {'recipe_form': recipe_form})
 
 
+@login_required
 def recipe_delete(request, slug):
     """
     View to delete recipes
