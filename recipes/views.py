@@ -51,6 +51,7 @@ def CuisineView(request, cuisine):
         'american': 5,
         'latin-american': 6,
         'caribbean': 7,
+        'desserts': 8
     }
 
     cuisine_int = CUISINE_CHOICES.get(cuisine.lower())
