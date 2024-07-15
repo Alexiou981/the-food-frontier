@@ -64,3 +64,11 @@ Each page of the blog is displayed clearly through a navbar which offers the use
 9. I can access recipes written by me on the My Recipes tab.
 10. I can filter recipes depending on which cuisine they're at by choosing a cuisine from the dropdown menu.
 
+### Technologies Used
+#### Languages:
+- HTML5
+- CSS3
+- Javascript
+- Python    
+- Django
+- SQL - Postgres
