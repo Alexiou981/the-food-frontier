@@ -37,6 +37,9 @@
                                 {% elif recipe.cuisine == 7 %}
                                 <img class="card-img-top" src="{% static 'images/caribbean.jpg' %}"
                                     alt="placeholder image">
+                                {% elif recipe.cuisine == 8 %}
+                                    <img class="card-img-top" src="{% static 'images/desserts.jpg' %}"
+                                        alt="placeholder image">
                                 {% else %}
                                 <img class="card-img-top" src="#" alt="{{ recipe.title }}">
                                 {% endif %}
