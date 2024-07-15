@@ -46,20 +46,3 @@ class Recipe(models.Model):
         super().save(*args, **kwargs)
 
 
-class RecipeComment(models.Model):
-    post = models.ForeignKey(Recipe, on_delete=models.CASCADE, related_name="comments")
-    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="commentor")
-    body = models.TextField()
-    approval_status = models.IntegerField(choices=APPROVAL_STATUS, default=0)
-    created_on = models.DateTimeField(auto_now_add=True)
-    modified_on = models.DateTimeField(auto_now=True)
-
-
-    class Meta:
-        ordering = ["-created_on"]
-
-
-    def __str__(self):
-        return f'{self.body} commented by {self.author}'
-    
-
