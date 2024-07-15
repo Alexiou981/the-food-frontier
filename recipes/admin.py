@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Recipe, RecipeComment
+from .models import Recipe
 from django_summernote.admin import SummernoteModelAdmin
 from .forms import RecipeForm
 
@@ -20,10 +20,4 @@ class RecipeAdmin(SummernoteModelAdmin):
             obj.author = request.user
         obj.save() 
     
-@admin.register(RecipeComment)
-class RecipeComment(SummernoteModelAdmin):
-
-    list_display = ('body', 'approval_status')
-    list_filter = ('approval_status',)
-
 
