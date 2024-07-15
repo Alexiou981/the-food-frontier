@@ -13,7 +13,34 @@
                 <p class="post-content">{{ recipe.excerpt | safe }}<p>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
-                <img src="{% static 'images/veggies.jpg' %}" class="scale" alt="placeholder">
+              <div class="image-container">
+                {% if recipe.cuisine == 0 %}
+                <img class="card-img-top" src="{% static 'images/mediterranean.jpg' %}"
+                    alt="placeholder image">
+                {% elif recipe.cuisine == 1 %}
+                <img class="card-img-top" src="{% static 'images/asian.jpg' %}" alt="placeholder image">
+                {% elif recipe.cuisine == 2 %}
+                <img class="card-img-top" src="{% static 'images/middle-eastern.jpg' %}"
+                    alt="placeholder image">
+                {% elif recipe.cuisine == 3 %}
+                <img class="card-img-top" src="{% static 'images/european.jpg' %}"
+                    alt="placeholder image">
+                {% elif recipe.cuisine == 4 %}
+                <img class="card-img-top" src="{% static 'images/african.jpg' %}"
+                    alt="placeholder image">
+                {% elif recipe.cuisine == 5 %}
+                <img class="card-img-top" src="{% static 'images/american.jpg' %}"
+                    alt="placeholder image">
+                {% elif recipe.cuisine == 6 %}
+                <img class="card-img-top" src="{% static 'images/latin-american.jpg' %}"
+                    alt="placeholder image">
+                {% elif recipe.cuisine == 7 %}
+                <img class="card-img-top" src="{% static 'images/caribbean.jpg' %}"
+                    alt="placeholder image">
+                {% else %}
+                <img class="card-img-top" src="#" alt="{{ recipe.title }}">
+                {% endif %}
+            </div>
             </div>
         </div>
     </div>

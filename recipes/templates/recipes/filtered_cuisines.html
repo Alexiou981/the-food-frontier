@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 {% block content %}
 
 <!-- filtered_cuisines.html content starts here -->
@@ -34,6 +35,32 @@
                     <div class="card mb-4 {% if not recipe.approval_status and recipe.author == user %} pending-recipes {% endif %}">
                         <div class="card-body">
                             <div class="image-container">
+                                {% if recipe.cuisine == 0 %}
+                                <img class="card-img-top" src="{% static 'images/mediterranean.jpg' %}"
+                                    alt="placeholder image">
+                                {% elif recipe.cuisine == 1 %}
+                                <img class="card-img-top" src="{% static 'images/asian.jpg' %}" alt="placeholder image">
+                                {% elif recipe.cuisine == 2 %}
+                                <img class="card-img-top" src="{% static 'images/middle-eastern.jpg' %}"
+                                    alt="placeholder image">
+                                {% elif recipe.cuisine == 3 %}
+                                <img class="card-img-top" src="{% static 'images/european.jpg' %}"
+                                    alt="placeholder image">
+                                {% elif recipe.cuisine == 4 %}
+                                <img class="card-img-top" src="{% static 'images/african.jpg' %}"
+                                    alt="placeholder image">
+                                {% elif recipe.cuisine == 5 %}
+                                <img class="card-img-top" src="{% static 'images/american.jpg' %}"
+                                    alt="placeholder image">
+                                {% elif recipe.cuisine == 6 %}
+                                <img class="card-img-top" src="{% static 'images/latin-american.jpg' %}"
+                                    alt="placeholder image">
+                                {% elif recipe.cuisine == 7 %}
+                                <img class="card-img-top" src="{% static 'images/caribbean.jpg' %}"
+                                    alt="placeholder image">
+                                {% else %}
+                                <img class="card-img-top" src="#" alt="{{ recipe.title }}">
+                                {% endif %}
                             </div>
                             <a href="{% url 'recipes_detail' recipe.slug %}" class="post-link">
                                 <h2 class="card-title">{{ recipe.title }}</h2>
