@@ -37,7 +37,7 @@ The main pupropse of this blog is to provide food lovers a place where they can 
 This website is aimed for anyone with a passion for food and regardless of age. Whether a home cook, work in a professional kitchen or just curious to find out new recipes and ways of cooking this food blog is ideal for you.
 
 ### Navigation:
-Each page of the blog is displayed clearly through a navbar which offers the user the ability to navigate between pages with ease.
+Each page of the blog is displayed clearly through a navbar which offers the user the ability to navigate between pages with ease. Those include the Home, About, Register and Login for non logged-in users and Home, Recipes, About and Logout for logged-in users.
 
 ## User Stories
 
@@ -92,8 +92,8 @@ Each page of the blog is displayed clearly through a navbar which offers the use
 - whitenoise==5.3.0
 
 
-### Deployment:
-The Food Frontiers was deployed using Heroku. Deployment steps:
+## Deployment:
+The Food Frontier was deployed using Heroku. Deployment steps:
 - Install asgiref:
 ``` pip3 install asgiref==3.8.1 ```
 - Install cloudinary:
@@ -166,6 +166,7 @@ The changes were migrated using ```python3 manage.py migrate```
 - Include Heroku to allowed hosts in settings.py file.
 - Push to Github
 - Connect app to project repository and push.
+- Navigate to the Deploy tab, head over to the Manual Deploy section, choose the branch as main, and click Deploy Branch.
 
 ## Credits
 
