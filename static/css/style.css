@@ -239,11 +239,18 @@ h1.post-title{
 /* style rules for ingredients container */
 #recipe-ingredients {
     background-color: #f0fff026;
+    height: fit-content;
+    padding: 0.5rem 2rem;
 }
 
 /* style rules for instructions container */
 #recipe-instructions {
     background-color: #f0fff026;
+    padding: 0.5rem 2rem;
+}
+
+.card-text p b i span {
+    font-size: larger !important;
 }
 
 /* media query for 768px screens and larger */

@@ -59,14 +59,15 @@
             <div class="card-body recipe">
                 <div class="col-md-4" id="recipe-ingredients">
                 <!-- Use the | safe filter inside the template tags -->
-                <p class="card-text">
+                <div class="card-text">
                     {{ recipe.ingredients | safe }}
                 </div>
-                </p><br>
+                </div>
+                <br>
                 <div class="col-md-8" id="recipe-instructions">
-                <p class="card-text">
+                <div class="card-text">
                     {{ recipe.instructions | safe }}
-                </p>
+                </div>
                 </div>
             </div>
         </div>
