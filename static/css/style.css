@@ -183,3 +183,12 @@ nav.users_recipes{
     display: flex;
     justify-content: space-evenly;
 }
+
+/* sets navigation pages to the far right of the screen when not collapsed */
+.navigation-pages {
+    justify-content: flex-end;
+}
+
+.name-quote > p {
+    font-size: 70%;
+}
