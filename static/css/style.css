@@ -225,6 +225,17 @@ h1.post-title{
     margin-bottom: 2%;
 }
 
+/* style rule for masthead text container */
+
+.col-md-6.masthead-text {
+    padding: 0 5%;
+}
+/* style rule for excerpt of recipe */
+.post-excerpt {
+    font-size: small !important;
+    font-family: 'Open Sans' !important;
+}
+
 
 /* media query for 768px screens and larger */
 @media screen and (min-width:768px){
