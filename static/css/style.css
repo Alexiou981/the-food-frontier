@@ -210,13 +210,29 @@ h2.card-title{
 
 /* style rule for post-detail title */
 h1.post-title{
-    font-size:medium;
+    font-size:large;
+}
+
+/* style rule for post-detail body */
+.card-body p span {
+    font-size: medium !important;
+    font-family: 'Open Sans' !important;
+}
+
+/* style rule for comments section */
+.row.comments {
+    background: lightyellow;
+    margin-bottom: 2%;
 }
 
 
 /* media query for 768px screens and larger */
 @media screen and (min-width:768px){
     /* style rules for navbar */
+    .navbar > .container-fluid{
+        margin-left: 4%;
+        margin-right: 4%;
+    }
     .name-quote > p {
         font-size: 80%;
     }
@@ -252,7 +268,7 @@ h1.post-title{
 
     /* style rule for post-detail title */
     h1.post-title{
-        font-size:large;
+        font-size:larger;
     }
 
     .col-md-6{
@@ -265,8 +281,6 @@ h1.post-title{
     /* style rules for navbar */
     .navbar > .container-fluid{
         align-items: normal;
-        margin-left: 2%;
-        margin-right: 2%;
     }
 
     /* style rule for post-detail title */
@@ -333,5 +347,9 @@ h1.post-title{
 
     .col-md-4{
         padding: 3rem;
+    }
+
+    .container {
+        max-width: 1800px;
     }
 }
