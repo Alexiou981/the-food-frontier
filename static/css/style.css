@@ -198,6 +198,7 @@ nav.users_recipes{
 }
 
 /* style rule for social media links */
+
 .sm-links > a {
     font-size: x-large;
     color: black;
@@ -215,6 +216,25 @@ nav.users_recipes{
         font-size: 90%;
         text-decoration: underline;
     }
+
+    /* style rule for social media links */
+    .creator {
+        font-size: large;
+    }
+
+    .sm-links {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+
+    .sm-links > a {
+    font-size: xx-large;
+    color: black;
+}
 }
 
 /* media query for 1024px screens and larger */
@@ -240,5 +260,19 @@ nav.users_recipes{
     .logged-in-user {
         font-size: 110%;
         text-decoration: underline;
+    }
+
+    .creator {
+        font-size: x-large;
+    }
+
+    .sm-links {
+        margin-left: 35%;
+        margin-right: 35%;
+    }
+
+    .sm-links > a {
+        font-size: xxx-large;
+        color: black;
     }
 }
