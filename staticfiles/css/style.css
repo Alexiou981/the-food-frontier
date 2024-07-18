@@ -1,18 +1,13 @@
-/* style.css file taken from the Code Institute Codestar project */
 
 body {
-    background-color: #F9FAFC;
+    background-color: #cbc2a3;
+    font-family: Open Sans, sans-serif
 }
 
 .brand {
-    font-family: Lato, sans-serif;
     font-size: 1.4rem;
     font-weight: 700;
     color: #4A4A4F;
-}
-
-.red-o {
-    color: #E84610;
 }
 
 .thin {
@@ -28,7 +23,7 @@ body {
 }
 
 .main-bg {
-    background-color: #F9FAFC;
+    background-color: #cbc2a3;
 }
 
 .card {
@@ -64,7 +59,6 @@ body {
     overflow: hidden;
     position: relative;
     display: inline-block;
-    height: 33vh;
     width: 100%;
 }
 
@@ -81,7 +75,7 @@ body {
 
 .masthead-image:after {
     content: "";
-    position: absolute;
+    position: relative;
     top: 0;
     right: 90%;
     height: 100%;
@@ -167,6 +161,7 @@ body {
     display: flex;
 }
 
+/* style rule for add your own recipe question */
 .create-recipe-question {
     display: flex;
     flex-direction: column;
@@ -182,4 +177,179 @@ body {
 nav.users_recipes{
     display: flex;
     justify-content: space-evenly;
+}
+
+/* sets navigation pages to the far right of the screen when not collapsed */
+.navigation-pages {
+    justify-content: flex-end;
+}
+
+/* style rule for quote under page title */
+.name-quote > p {
+    font-size: 75%;
+}
+
+/* style rule for logged in user display */
+.logged-in-user {
+    font-size: 70%;
+    text-decoration: underline;
+}
+
+/* style rule for social media links */
+
+.sm-links > a {
+    font-size: x-large;
+    color: black;
+}
+
+/* style rule for post title */
+h2.card-title{
+    padding-top: .5rem;
+    font-size: medium;
+}
+
+/* style rule for post-detail title */
+h1.post-title{
+    font-size:large;
+}
+
+/* style rule for post-detail body */
+.card-body p span {
+    font-size: medium !important;
+    font-family: 'Open Sans' !important;
+}
+
+/* style rule for comments section */
+.row.comments {
+    background: lightyellow;
+    margin-bottom: 2%;
+}
+
+
+/* media query for 768px screens and larger */
+@media screen and (min-width:768px){
+    /* style rules for navbar */
+    .navbar > .container-fluid{
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+    .name-quote > p {
+        font-size: 80%;
+    }
+
+    .logged-in-user {
+        font-size: 90%;
+        text-decoration: underline;
+    }
+
+    /* style rule for social media links */
+    .creator {
+        font-size: large;
+    }
+
+    .sm-links {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+
+    .sm-links > a {
+        font-size: xx-large;
+        color: black;
+    }
+
+    /* style rule for post title */
+        h2.card-title{
+        font-size: large;
+    }
+
+    /* style rule for post-detail title */
+    h1.post-title{
+        font-size:larger;
+    }
+
+    .col-md-6{
+        align-content: center;
+    }
+}
+
+/* media query for 1024px screens and larger */
+@media screen and (min-width:1024px){
+    /* style rules for navbar */
+    .navbar > .container-fluid{
+        align-items: normal;
+    }
+
+    /* style rule for post-detail title */
+    h1.post-title{
+        font-size:x-large;
+    }
+}
+
+/* media query for 1440px screens and larger */
+@media screen and (min-width:1440px){
+    /* style rules for navbar */
+
+    .name-quote > p {
+        font-size: 100%;
+    }
+
+    .logged-in-user {
+        font-size: 110%;
+        text-decoration: underline;
+    }
+
+    .sm-links {
+        margin-left: 40%;
+        margin-right: 40%;
+    }
+
+    .sm-links > a {
+        font-size: xx-large;
+        color: black;
+    }
+
+    /* style rule for post title */
+    h2.card-title{
+    padding-top: .5rem;
+    font-size: x-large;
+    }
+
+    /* style rule for post container */
+    .col-12.mt-3 {
+        padding: 0, 5%, 0, 5%;
+    }
+
+}
+
+@media screen and (min-width:2560px){
+    /* style rule for post container */
+    .navbar > .container-fluid{
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+
+    #navbarText{
+        font-size: larger;
+    }
+
+    .creator{
+        font-size: x-large;
+    }
+
+    .col-12.mt-3 {
+        padding-right: 15%;
+        padding-left: 15%;
+    }
+
+    .col-md-4{
+        padding: 3rem;
+    }
+
+    .container {
+        max-width: 1800px;
+    }
 }
