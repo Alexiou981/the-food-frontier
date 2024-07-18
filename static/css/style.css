@@ -241,17 +241,20 @@ h1.post-title{
     background-color: #f0fff026;
     height: fit-content;
     padding: 0.5rem 2rem;
+    font-family: 'Open Sans' !important;
+}
+
+.card-text p span {
+    font-size: large !important;
 }
 
 /* style rules for instructions container */
 #recipe-instructions {
     background-color: #f0fff026;
     padding: 0.5rem 2rem;
+    font-family: 'Open Sans' !important;
 }
 
-.card-text p b i span {
-    font-size: larger !important;
-}
 
 /* media query for 768px screens and larger */
 @media screen and (min-width:768px){
@@ -294,11 +297,11 @@ h1.post-title{
     }
 
     /* style rule for post-detail title */
-    h1.post-title{
+        h1.post-title{
         font-size:larger;
     }
 
-    .col-md-6{
+        .col-md-6{
         align-content: center;
     }
 
@@ -358,8 +361,8 @@ h1.post-title{
 
     /* style rule for post title */
     h2.card-title{
-    padding-top: .5rem;
-    font-size: x-large;
+        padding-top: .5rem;
+        font-size: x-large;
     }
 
     /* style rule for post container */
