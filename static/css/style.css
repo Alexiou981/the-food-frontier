@@ -193,3 +193,8 @@ nav.users_recipes{
     font-size: 70%;
     text-decoration: underline;
 }
+
+.sm-links > a {
+    font-size: x-large;
+    color: black;
+}
