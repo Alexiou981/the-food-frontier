@@ -255,6 +255,17 @@ h1.post-title{
     font-family: 'Open Sans' !important;
 }
 
+/* style rules for about section */
+.masthead-text.about {
+    background-color: #445261;
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+}
+
 
 /* media query for 768px screens and larger */
 @media screen and (min-width:768px){
@@ -320,6 +331,10 @@ h1.post-title{
 
     div#recipe-instructions{
         width: 65%;
+    }
+    /* style rule for about page */
+    .masthead-text.about {
+        align-items: center;
     }
 }
 
