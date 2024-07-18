@@ -254,7 +254,7 @@ h1.post-title{
     h1.post-title{
         font-size:large;
     }
-    
+
     .col-md-6{
         align-content: center;
     }
@@ -273,8 +273,6 @@ h1.post-title{
     h1.post-title{
         font-size:x-large;
     }
-}
-
 }
 
 /* media query for 1440px screens and larger */
