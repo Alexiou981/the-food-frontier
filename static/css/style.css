@@ -208,6 +208,11 @@ h2.card-title{
     font-size: medium;
 }
 
+/* style rule for post-detail title */
+h1.post-title{
+    font-size:medium;
+}
+
 
 /* media query for 768px screens and larger */
 @media screen and (min-width:768px){
@@ -236,14 +241,23 @@ h2.card-title{
     }
 
     .sm-links > a {
-    font-size: xx-large;
-    color: black;
-}
+        font-size: xx-large;
+        color: black;
+    }
 
     /* style rule for post title */
-    h2.card-title{
-    font-size: large;
-}
+        h2.card-title{
+        font-size: large;
+    }
+
+    /* style rule for post-detail title */
+    h1.post-title{
+        font-size:large;
+    }
+    
+    .col-md-6{
+        align-content: center;
+    }
 }
 
 /* media query for 1024px screens and larger */
@@ -254,6 +268,12 @@ h2.card-title{
         margin-left: 2%;
         margin-right: 2%;
     }
+
+    /* style rule for post-detail title */
+    h1.post-title{
+        font-size:x-large;
+    }
+}
 
 }
 
