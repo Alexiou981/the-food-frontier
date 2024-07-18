@@ -262,17 +262,21 @@ nav.users_recipes{
         text-decoration: underline;
     }
 
+    #navbarText{
+        font-size: larger;
+    }
+
     .creator {
         font-size: x-large;
     }
 
     .sm-links {
-        margin-left: 35%;
-        margin-right: 35%;
+        margin-left: 40%;
+        margin-right: 40%;
     }
 
     .sm-links > a {
-        font-size: xxx-large;
+        font-size: xx-large;
         color: black;
     }
 }
