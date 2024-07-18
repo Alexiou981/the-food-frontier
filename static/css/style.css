@@ -163,6 +163,7 @@ body {
     display: flex;
 }
 
+/* style rule for add your own recipe question */
 .create-recipe-question {
     display: flex;
     flex-direction: column;
@@ -185,16 +186,59 @@ nav.users_recipes{
     justify-content: flex-end;
 }
 
+/* style rule for quote under page title */
 .name-quote > p {
     font-size: 75%;
 }
 
+/* style rule for logged in user display */
 .logged-in-user {
     font-size: 70%;
     text-decoration: underline;
 }
 
+/* style rule for social media links */
 .sm-links > a {
     font-size: x-large;
     color: black;
+}
+
+
+/* media query for 768px screens and larger */
+@media screen and (min-width:768px){
+    /* style rules for navbar */
+    .name-quote > p {
+        font-size: 80%;
+    }
+
+    .logged-in-user {
+        font-size: 90%;
+        text-decoration: underline;
+    }
+}
+
+/* media query for 1024px screens and larger */
+@media screen and (min-width:1024px){
+    /* style rules for navbar */
+    .navbar > .container-fluid{
+        align-items: normal;
+    }
+}
+
+/* media query for 1440px screens and larger */
+@media screen and (min-width:1440px){
+    /* style rules for navbar */
+    .navbar > .container-fluid{
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+
+    .name-quote > p {
+        font-size: 100%;
+    }
+
+    .logged-in-user {
+        font-size: 110%;
+        text-decoration: underline;
+    }
 }
