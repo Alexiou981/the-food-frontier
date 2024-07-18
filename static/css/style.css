@@ -76,7 +76,7 @@ body {
 
 .masthead-image:after {
     content: "";
-    position: absolute;
+    position: relative;
     top: 0;
     right: 90%;
     height: 100%;
