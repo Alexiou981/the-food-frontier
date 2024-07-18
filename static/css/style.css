@@ -1,7 +1,7 @@
 /* style.css file taken from the Code Institute Codestar project */
 
 body {
-    background-color: #F9FAFC;
+    background-color: #cbc2a3;
 }
 
 .brand {
@@ -9,10 +9,6 @@ body {
     font-size: 1.4rem;
     font-weight: 700;
     color: #4A4A4F;
-}
-
-.red-o {
-    color: #E84610;
 }
 
 .thin {
@@ -28,7 +24,7 @@ body {
 }
 
 .main-bg {
-    background-color: #F9FAFC;
+    background-color: #cbc2a3;
 }
 
 .card {
@@ -190,5 +186,10 @@ nav.users_recipes{
 }
 
 .name-quote > p {
+    font-size: 75%;
+}
+
+.logged-in-user {
     font-size: 70%;
+    text-decoration: underline;
 }
