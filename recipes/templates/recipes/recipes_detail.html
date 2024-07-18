@@ -6,13 +6,12 @@
     <div class="container">
         <div class="row g-0">
             <div class="col-md-6 masthead-text">
-                <!-- Post title goes in these h1 tags -->
                 <h1 class="post-title">{{ recipe.title }}</h1>
-                <!-- Post author goes before the | the post's created date goes after -->
-                <p class="post-subtitle">{{ recipe.author }} | {{ recipe.created_on }}</p>
+                <p class="post-subtitle">{{ recipe.author }} | {{ recipe.created_on }} 
+                    | {{ recipe.get_cuisine_display }} cuisine</p>
                 <div class="post-excerpt">{{ recipe.excerpt|safe }}</div>
             </div>
-            <div class="d-none d-md-block col-md-6 masthead-image">
+            <div class="d-md-block col-md-6 masthead-image">
               <div class="image-container">
                 {% if recipe.cuisine == 0 %}
                 <img class="card-img-top" src="{% static 'images/mediterranean.jpg' %}"
@@ -57,14 +56,18 @@
     {% endif %}  
     <div class="row">
         <div class="col card mb-4  mt-3 left  top">
-            <div class="card-body">
+            <div class="card-body recipe">
+                <div class="col-md-4" id="recipe-ingredients">
                 <!-- Use the | safe filter inside the template tags -->
                 <p class="card-text">
                     {{ recipe.ingredients | safe }}
+                </div>
                 </p><br>
+                <div class="col-md-6" id="recipe-instructions">
                 <p class="card-text">
                     {{ recipe.instructions | safe }}
                 </p>
+                </div>
             </div>
         </div>
     </div>
