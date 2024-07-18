@@ -236,6 +236,15 @@ h1.post-title{
     font-family: 'Open Sans' !important;
 }
 
+/* style rules for ingredients container */
+#recipe-ingredients {
+    background-color: #f0fff026;
+}
+
+/* style rules for instructions container */
+#recipe-instructions {
+    background-color: #f0fff026;
+}
 
 /* media query for 768px screens and larger */
 @media screen and (min-width:768px){
@@ -284,6 +293,23 @@ h1.post-title{
 
     .col-md-6{
         align-content: center;
+    }
+
+    /* style rule for recipe details */
+    .card-body.recipe{
+        display: flex;
+        flex-direction: row;   
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        padding: 0;
+    }
+
+    div#recipe-ingredients{
+        width: 30%;
+    }
+
+    div#recipe-instructions{
+        width: 65%;
     }
 }
 
