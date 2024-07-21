@@ -208,6 +208,10 @@ h2.card-title{
     font-size: medium;
 }
 
+h2.card-title.recipes {
+    font-size: larger !important;
+}
+
 /* style rule for post-detail title */
 h1.post-title{
     font-size:large;
@@ -230,10 +234,12 @@ h1.post-title{
 .col-md-6.masthead-text {
     padding: 0 5%;
 }
+
 /* style rule for excerpt of recipe */
-.post-excerpt {
+.recipe-excerpt {
     font-size: small !important;
     font-family: 'Open Sans' !important;
+    padding: 0 5%;
 }
 
 /* style rules for ingredients container */
@@ -245,7 +251,7 @@ h1.post-title{
 }
 
 .card-text p span {
-    font-size: large !important;
+    font-size: larger !important;
 }
 
 /* style rules for instructions container */

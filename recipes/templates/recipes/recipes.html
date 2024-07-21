@@ -66,9 +66,10 @@
                                 {% endif %}
                             </div>
                             <a href="{% url 'recipes_detail' recipe.slug %}" class="post-link">
-                                <h2 class="card-title">{{ recipe.title }}</h2>
-                                <p>Author: {{ recipe.author }}</p>
+                                <h2 class="card-title recipes">{{ recipe.title }}</h2>
                             </a>
+                            <hr />
+                            <p class="card-text text-muted h6">Author: {{ recipe.author }}</p>
                             <hr />
                             {% if not recipe.approval_status and recipe.author == user %}
                             <p style="color: white"> This recipe is awaiting approval.</p>
