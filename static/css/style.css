@@ -272,6 +272,19 @@ h1.post-title{
     align-items: baseline;
 }
 
+/* style rules for recipe form */
+iframe#id_excerpt_iframe {
+    width: 100%;
+}
+
+iframe#id_ingredients_iframe {
+    width: 100%;
+}
+
+iframe#id_instructions_iframe {
+    width: 100%;
+}
+
 
 /* media query for 768px screens and larger */
 @media screen and (min-width:768px){
