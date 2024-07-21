@@ -177,6 +177,7 @@ body {
 nav.users_recipes{
     display: flex;
     justify-content: space-evenly;
+    margin-top: 2rem;
 }
 
 /* sets navigation pages to the far right of the screen when not collapsed */
