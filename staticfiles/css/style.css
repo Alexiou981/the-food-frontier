@@ -177,6 +177,7 @@ body {
 nav.users_recipes{
     display: flex;
     justify-content: space-evenly;
+    margin-top: 2rem;
 }
 
 /* sets navigation pages to the far right of the screen when not collapsed */
@@ -208,6 +209,10 @@ h2.card-title{
     font-size: medium;
 }
 
+h2.card-title.recipes {
+    font-size: larger !important;
+}
+
 /* style rule for post-detail title */
 h1.post-title{
     font-size:large;
@@ -223,6 +228,62 @@ h1.post-title{
 .row.comments {
     background: lightyellow;
     margin-bottom: 2%;
+}
+
+/* style rule for masthead text container */
+
+.col-md-6.masthead-text {
+    padding: 0 5%;
+}
+
+/* style rule for excerpt of recipe */
+.recipe-excerpt {
+    font-size: small !important;
+    font-family: 'Open Sans' !important;
+    padding: 0 5%;
+}
+
+/* style rules for ingredients container */
+#recipe-ingredients {
+    background-color: #f0fff026;
+    height: fit-content;
+    padding: 0.5rem 2rem;
+    font-family: 'Open Sans' !important;
+}
+
+.card-text p span {
+    font-size: medium !important;
+}
+
+/* style rules for instructions container */
+#recipe-instructions {
+    background-color: #f0fff026;
+    padding: 0.5rem 2rem;
+    font-family: 'Open Sans' !important;
+}
+
+/* style rules for about section */
+.masthead-text.about {
+    background-color: #445261;
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+}
+
+/* style rules for recipe form */
+iframe#id_excerpt_iframe {
+    width: 100%;
+}
+
+iframe#id_ingredients_iframe {
+    width: 100%;
+}
+
+iframe#id_instructions_iframe {
+    width: 100%;
 }
 
 
@@ -267,12 +328,38 @@ h1.post-title{
     }
 
     /* style rule for post-detail title */
-    h1.post-title{
+        h1.post-title{
         font-size:larger;
     }
 
-    .col-md-6{
+        .col-md-6{
         align-content: center;
+    }
+
+    /* style rule for recipe details */
+    .card-body.recipe{
+        display: flex;
+        flex-direction: row;   
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        padding: 0;
+    }
+
+    div#recipe-ingredients{
+        width: 30%;
+    }
+
+    div#recipe-instructions{
+        width: 65%;
+    }
+    /* style rule for about page */
+    .masthead-text.about {
+        align-items: center;
+    }
+
+    /* style rule for about image */
+    .d-md-block.col-md-8.masthead-image.about {
+        height: 20vh;
     }
 }
 
@@ -287,6 +374,12 @@ h1.post-title{
     h1.post-title{
         font-size:x-large;
     }
+
+    /* style rule for about image */
+    .d-md-block.col-md-8.masthead-image.about {
+        height: 25vh;
+    }
+
 }
 
 /* media query for 1440px screens and larger */
@@ -314,8 +407,8 @@ h1.post-title{
 
     /* style rule for post title */
     h2.card-title{
-    padding-top: .5rem;
-    font-size: x-large;
+        padding-top: .5rem;
+        font-size: x-large;
     }
 
     /* style rule for post container */
