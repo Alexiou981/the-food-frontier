@@ -1,6 +1,5 @@
 from django import forms
 from .models import Recipe
-from django_summernote.widgets import SummernoteWidget
 from bs4 import BeautifulSoup
 
 
@@ -30,9 +29,9 @@ class RecipeForm(forms.ModelForm):
         model = Recipe
         fields = ['title', 'excerpt', 'ingredients', 'instructions', 'cuisine']
         widgets = {
-            'excerpt': SummernoteWidget(),
-            'ingredients': SummernoteWidget(),
-            'instructions': SummernoteWidget(),
+            'excerpt': forms.Textarea(attrs={'rows': 4}),
+            'ingredients': forms.Textarea(attrs={'rows': 6}),
+            'instructions': forms.Textarea(attrs={'rows': 6}),
         }
 
 
