@@ -342,6 +342,11 @@ h1.post-title{
     .masthead-text.about {
         align-items: center;
     }
+
+    /* style rule for about image */
+    .d-md-block.col-md-8.masthead-image.about {
+        height: 20vh;
+    }
 }
 
 /* media query for 1024px screens and larger */
@@ -354,6 +359,11 @@ h1.post-title{
     /* style rule for post-detail title */
     h1.post-title{
         font-size:x-large;
+    }
+
+    /* style rule for about image */
+    .d-md-block.col-md-8.masthead-image.about {
+        height: 25vh;
     }
 
 }
