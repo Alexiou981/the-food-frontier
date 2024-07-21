@@ -251,7 +251,7 @@ h1.post-title{
 }
 
 .card-text p span {
-    font-size: larger !important;
+    font-size: medium !important;
 }
 
 /* style rules for instructions container */
@@ -355,6 +355,7 @@ h1.post-title{
     h1.post-title{
         font-size:x-large;
     }
+
 }
 
 /* media query for 1440px screens and larger */
