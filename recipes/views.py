@@ -8,19 +8,20 @@ from django.db.models import Q
 from .models import Recipe
 from .forms import RecipeForm, strip_html_tags
 
+
 # Create your views here.
 class RecipeList(LoginRequiredMixin, generic.ListView):
     template_name = 'recipes/recipes.html'
     paginate_by = 6
-    """ 
+    """
     This fucntion was created with the help of
-    Complex lookups with Q object from the 
+    Complex lookups with Q object from the
     Django documentation website here:
     https://docs.djangoproject.com/en/5.0/topics/db/queries/#complex-lookups-with-q-objects
 
     It ensures that pending recipes only appear to
-    the author of them, and the rest of the users
-    don't get to see the new recipe until it's 
+    the author who wrote them, and the rest of the users
+    don't get to see the new recipe until it's
     approved by the admin.
     """
     def get_queryset(self):
@@ -58,10 +59,12 @@ def CuisineView(request, cuisine):
     }
 
     cuisine_int = CUISINE_CHOICES.get(cuisine.lower())
-    
     cuisine_recipes = Recipe.objects.filter(cuisine=cuisine_int)
-    return render(request, 'recipes/filtered_cuisines.html', {"cuisine": cuisine, 'cuisine_recipes': cuisine_recipes})
-    
+    return render(request, 'recipes/filtered_cuisines.html', {
+        "cuisine": cuisine,
+        'cuisine_recipes': cuisine_recipes
+    })
+
 
 @login_required
 def recipes_detail(request, slug):
@@ -98,7 +101,7 @@ def users_recipe(request):
             recipe.author = request.user
             recipe_form.save()
             messages.add_message(request, messages.SUCCESS,
-            "Recipe submitted and is awaiting for approval")
+                                 "Recipe submitted and is awaiting approval")
     recipe_form = RecipeForm()
 
     return render(
@@ -123,14 +126,17 @@ def recipe_edit(request, slug):
             updated_recipe = recipe_form.save(commit=False)
             updated_recipe.approval_status = False
             updated_recipe.save()
-            messages.add_message(request, messages.SUCCESS, 'Recipe updated and awaiting approval')
+            messages.add_message(request, messages.SUCCESS,
+                                 'Recipe updated and awaiting approval')
             return redirect('recipes')
         else:
-            messages.add_message(request, messages.ERROR, 'Error updating recipe!')
+            messages.add_message(request, messages.ERROR,
+                                 'Error updating recipe!')
     else:
         recipe_form = RecipeForm(instance=recipe)
 
-    return render(request, 'recipes/recipe_form.html', {'recipe_form': recipe_form})
+    return render(request, 'recipes/recipe_form.html',
+                  {'recipe_form': recipe_form})
 
 
 @login_required
@@ -142,8 +148,10 @@ def recipe_delete(request, slug):
 
     if recipe_to_delete.author == request.user:
         recipe_to_delete.delete()
-        messages.add_message(request, messages.SUCCESS, 'Recipe deleted successfully!')
+        messages.add_message(request, messages.SUCCESS,
+                             'Recipe deleted successfully!')
     else:
-        messages.add_message(request, messages.ERROR, 'You can only delete your own recipes.')
-    
+        messages.add_message(request, messages.ERROR,
+                             'You can only delete your own recipes.')
+
     return HttpResponseRedirect(reverse('recipes'))
