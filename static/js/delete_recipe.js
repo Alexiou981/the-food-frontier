@@ -1,4 +1,3 @@
-// Code taken from Codestar walkthrough by Code Institute
 // Gets detele modal and delete button 
 const deleteModal = new bootstrap.Modal(document.getElementById("deleteModal"));
 const deleteButtons = document.getElementsByClassName("btn-delete");
