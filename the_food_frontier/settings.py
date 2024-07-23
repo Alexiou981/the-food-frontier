@@ -121,7 +121,8 @@ DATABASES = {
 CSRF_TRUSTED_ORIGINS = [
     "https://*.codeinstitute-ide.net",
     "https://*.gitpod.io",
-    "https://*.herokuapp.com"
+    "https://*.herokuapp.com",
+    "https://ui.dev"
 ]
 
 REMOVED_SECRET_KEY = os.environ.get("REMOVED_SECRET_KEY")
