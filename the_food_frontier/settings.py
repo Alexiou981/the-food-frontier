@@ -33,7 +33,11 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     '8000-alexiou981-thefoodfront-fn8ke887xyk.ws.codeinstitute-ide.net',
-    '.herokuapp.com'
+    '.herokuapp.com',
+    'localhost',
+    '127.0.0.1',
+    'ui.dev',
+    '.ui.dev',
     ]
 
 
