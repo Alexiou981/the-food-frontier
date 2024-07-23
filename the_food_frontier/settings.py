@@ -121,7 +121,8 @@ DATABASES = {
 CSRF_TRUSTED_ORIGINS = [
     "https://*.codeinstitute-ide.net",
     "https://*.gitpod.io",
-    "https://*.herokuapp.com"
+    "https://*.herokuapp.com",
+    "https://ui.dev"
 ]
 
 SECRET_KEY = os.environ.get("SECRET_KEY")
