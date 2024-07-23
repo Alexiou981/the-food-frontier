@@ -80,8 +80,33 @@ The font element is obsolete.(While true, this error was caused by Summernote du
 - style.css passed through the W3C CSS validator withour any errors or warnings ✅
 
 #### Scripts:
-- comments.js passed through the JSHing linter without any errors ✅
-- delete_recipes.js passed through the JSHing linter without any errors ✅
+- comments.js passed through the JSHint linter without any errors ✅
+- delete_recipes.js passed through the JSHint linter without any errors ✅
+
+#### Python files:
+##### the_food_frontier project folder
+- settings.py passed through the CI Python Linter without any errors ✅
+- urls.py passed through the CI Python Linter without any errors ✅
+
+##### blog app folder
+- admin.py passed through the CI Python Linter without any errors ✅
+- forms.py passed through the CI Python Linter without any errors ✅
+- models.py passed through the CI Python Linter without any errors ✅
+- urls.py passed through the CI Python Linter without any errors ✅
+- views.py passed through the CI Python Linter without any errors ✅
+
+##### recipes app folder
+- admin.py passed through the CI Python Linter without any errors ✅
+- forms.py passed through the CI Python Linter without any errors ✅
+- models.py passed through the CI Python Linter without any errors ✅
+- urls.py passed through the CI Python Linter without any errors ✅
+- views.py passed through the CI Python Linter without any errors ✅
+
+##### about app folder
+- admin.py passed through the CI Python Linter without any errors ✅
+- models.py passed through the CI Python Linter without any errors ✅
+- urls.py passed through the CI Python Linter without any errors ✅
+- views.py passed through the CI Python Linter without any errors ✅
 
 ## Technologies Used
 
