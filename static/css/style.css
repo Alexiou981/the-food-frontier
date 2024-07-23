@@ -219,6 +219,11 @@ h1.post-title{
 }
 
 /* style rule for post-detail body */
+
+.card-body p font {
+    font-family: 'Open Sans' !important;
+}
+
 .card-body p span {
     font-size: medium !important;
 }
