@@ -2,6 +2,7 @@ from django.contrib import admin
 from .models import Post, PostComment
 from django_summernote.admin import SummernoteModelAdmin
 
+
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):
 
@@ -17,4 +18,3 @@ class PostCommentAdmin(SummernoteModelAdmin):
     list_display = ('body', 'author', 'approval_status')
     search_fields = ['body']
     list_filter = ('approval_status',)
-
