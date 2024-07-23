@@ -108,6 +108,15 @@ The font element is obsolete.(While true, this error was caused by Summernote du
 - urls.py passed through the CI Python Linter without any errors ✅
 - views.py passed through the CI Python Linter without any errors ✅
 
+### Responsiveness
+- Home page tested responsive from 320px to 2560 px and all elements respons appropriately ✅
+- Post Detail page tested responsive from 320px to 2560 px and all elements respons appropriately ✅
+- Recipes page tested responsive from 320px to 2560 px and all elements respons appropriately ✅
+- Recipe Detail page tested responsive from 320px to 2560 px and all elements respons appropriately ✅
+- Recipe Form tested responsive from 320px to 2560 px and all elements respons appropriately ✅
+- My Recipes page tested responsive from 320px to 2560 px and all elements respons appropriately ✅
+- Filtered Recipes page tested responsive from 320px to 2560 px and all elements respons appropriately ✅
+
 ## Technologies Used
 
 ### Languages:
