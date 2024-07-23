@@ -1,7 +1,7 @@
 
 body {
     background-color: #cbc2a3;
-    font-family: Open Sans, sans-serif !important;
+    font-family: 'Open Sans', sans-serif !important;
 }
 
 .brand {
@@ -71,20 +71,6 @@ body {
 .masthead-image {
     position: relative;
     overflow: hidden;
-}
-
-.masthead-image:after {
-    content: "";
-    position: relative;
-    top: 0;
-    right: 90%;
-    height: 100%;
-    width: 150%;
-    background: #445261;
-    -webkit-transform: skew(15deg);
-    -moz-transform: skew(15deg);
-    transform: skew(15deg);
-    z-index: 100;
 }
 
 .post-link {
@@ -419,7 +405,7 @@ iframe#id_instructions_iframe {
 
     /* style rule for post container */
     .col-12.mt-3 {
-        padding: 0, 5%, 0, 5%;
+        padding: 0 5% 0 5%;
     }
 
 }
