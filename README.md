@@ -60,6 +60,22 @@ Each page of the blog is displayed clearly through a navbar which offers the use
 9. I can access recipes written by me on the My Recipes tab.
 10. I can filter recipes depending on which cuisine they're at by choosing a cuisine from the dropdown menu.
 
+
+## Testing
+### Validator Testing
+
+#### Templates:
+- base.html passed through HTML validator withour errors or warnings ✅
+- index.html passed through HTML validator withour errors or warnings ✅
+- about.html passed through HTML validator withour errors or warnings ✅
+- recipes.html passed through HTML validator withour errors or warnings ✅
+- recipes_detail.html passed through HTML validator withour errors or warnings ✅
+- my_recipes.html passed through HTML validator withour errors or warnings ✅
+- filtered_cuisines.html passed through HTML validator withour errors or warnings ✅
+- recipe_form.html passed through HTML validator withour errors or warnings ✅
+- post-detail.html passed through HTML validator with the following error:
+The font element is obsolete.(While true, this error was caused by Summernote due to choosing a font when submitting the recipes from the admin panel to populate the page. The font family of the body is set as 'Open Sans' inside the style.css file.)
+
 ## Technologies Used
 
 ### Languages:
