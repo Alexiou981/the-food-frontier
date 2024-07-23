@@ -221,7 +221,6 @@ h1.post-title{
 /* style rule for post-detail body */
 .card-body p span {
     font-size: medium !important;
-    font-family: 'Open Sans' !important;
 }
 
 /* style rule for comments section */
@@ -248,7 +247,6 @@ h1.post-title{
     background-color: #f0fff026;
     height: fit-content;
     padding: 0.5rem 2rem;
-    font-family: 'Open Sans' !important;
 }
 
 .card-text p span {
@@ -259,7 +257,10 @@ h1.post-title{
 #recipe-instructions {
     background-color: #f0fff026;
     padding: 0.5rem 2rem;
-    font-family: 'Open Sans' !important;
+}
+
+.card-text p font {
+    font-family: 'Open Sans', sans-serif !important;
 }
 
 /* style rules for about section */
