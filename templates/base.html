@@ -39,6 +39,9 @@
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/favicon-32x32.png' %}">
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon-16x16.png' %}">
     <link rel="manifest" href="{% static 'images/site.webmanifest' %}">
+    <link rel="preload" href="{% static 'images/veggies.jpg' %}"
+    alt="placeholder image">
+    <link rel="preload" href="{{ post.featured_image.url }}" alt="{{ post.title }}">
 
 </head>
 
