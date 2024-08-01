@@ -67,13 +67,6 @@ LOGOUT_REDIRECT_URL = '/'
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
 
-CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': os.environ.get('dkxdglhsl'),
-    'API_KEY': os.environ.get('265652194726159'),
-    'API_SECRET': os.environ.get('CLOUDINARY_API_SECRET'),
-    'SECURE': True,  # Ensures that URLs are HTTPS
-}
-
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
