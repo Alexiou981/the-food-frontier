@@ -4,6 +4,10 @@ body {
     font-family: 'Open Sans', sans-serif !important;
 }
 
+img {
+    width: 100%;
+    height: fit-content;
+}
 .brand {
     font-size: 1.4rem;
     font-weight: 700;
