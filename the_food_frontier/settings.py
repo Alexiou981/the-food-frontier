@@ -29,15 +29,11 @@ SECRET_KEY = 'django-insecure-c7scnz!5^#wvk9i2naz$r@r7$7f9sam0!\
 h_c3s2#jp_&j0mz&t'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     '8000-alexiou981-thefoodfront-fn8ke887xyk.ws.codeinstitute-ide.net',
     '.herokuapp.com',
-    'localhost',
-    '127.0.0.1',
-    'ui.dev',
-    '.ui.dev',
     ]
 
 
@@ -120,9 +116,7 @@ DATABASES = {
 
 CSRF_TRUSTED_ORIGINS = [
     "https://*.codeinstitute-ide.net",
-    "https://*.gitpod.io",
     "https://*.herokuapp.com",
-    "https://ui.dev"
 ]
 
 SECRET_KEY = os.environ.get("SECRET_KEY")
@@ -176,7 +170,3 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-SECURE_SSL_REDIRECT = True
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
