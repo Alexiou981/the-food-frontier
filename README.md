@@ -1,4 +1,7 @@
 # The Food Frontier
+
+![Site view across devices](static/images/readme_images/amiresponsive.png)
+
 The Food Frontier is a place for those enthusiastic and passionate about food. It consists of three major pages, the Home page which includes a variety of food based articles, an About page which describes the blogs purpose and a Recipes page which can be accessed by Registered users exclusively. It allows the user to interact with the blog and even contribute to it by adding their own recipes and comments to posts.
 
 ## Table of Contents
