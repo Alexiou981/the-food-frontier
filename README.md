@@ -6,30 +6,13 @@ The Food Frontier is a place for those enthusiastic and passionate about food. I
 
 ## Table of Contents
 + [UX](#ux "UX")
-  + [Site Purpose](#site-purpose "Site Purpose")
-  + [Audience](#audience "Audience")
-  + [Navigation](#navigation "Navigation")
 + [User Stories](#user-stories "User Stories")
-  + [Admin stories](#admin-stories "Admin stories")
-  + [User stories](#user-stories "User stories")
 + [Design](#design "Design")
-  + [Colour Scheme](#colour-scheme "Colour Scheme")
-  + [Typography](#typography "Typography")
-  + [Imagery](#imagery "Imagery")
 + [Features](#features "Features")
-  + [Existing Features](#existing-features "Existing Features")
-  + [Future Features](#future-features "Future Features")
-  + [C.R.U.D](#crud "C.R.U.D")
 + [Testing](#testing "Testing")
-  + [Validator Testing](#validator-testing "Validator Testing")
-  + [Unfixed Bugs](#unfixed-bugs "Unfixed Bugs")
 + [Technologies Used](#technologies-used "Technologies Used")
-  + [Main Languages Used](#main-languages-used "Main Languages Used")
-  + [Frameworks, Libraries & Programs Used](#frameworks-libraries-programs-used "Frameworks, Libraries & Programs Used")
 + [Deployment](#deployment "Deployment")
 + [Credits](#credits "Credits")
-  + [Content](#content "Content")
-  + [Media](#media "Media")
 
 ## UX
 
