@@ -112,13 +112,33 @@ The font element is obsolete.(While true, this error was caused by Summernote du
 - views.py passed through the CI Python Linter without any errors ✅
 
 ### Responsiveness
-- Home page tested responsive from 320px to 2560 px and all elements respons appropriately ✅
-- Post Detail page tested responsive from 320px to 2560 px and all elements respons appropriately ✅
-- Recipes page tested responsive from 320px to 2560 px and all elements respons appropriately ✅
-- Recipe Detail page tested responsive from 320px to 2560 px and all elements respons appropriately ✅
-- Recipe Form tested responsive from 320px to 2560 px and all elements respons appropriately ✅
-- My Recipes page tested responsive from 320px to 2560 px and all elements respons appropriately ✅
-- Filtered Recipes page tested responsive from 320px to 2560 px and all elements respons appropriately ✅
+- Home page tested responsive from 320px to 2560 px and all elements respond appropriately ✅
+- Post Detail page tested responsive from 320px to 2560 px and all elements respond appropriately ✅
+- Recipes page tested responsive from 320px to 2560 px and all elements respond appropriately ✅
+- Recipe Detail page tested responsive from 320px to 2560 px and all elements respond appropriately ✅
+- Recipe Form tested responsive from 320px to 2560 px and all elements respond appropriately ✅
+- My Recipes page tested responsive from 320px to 2560 px and all elements respond appropriately ✅
+- Filtered Recipes page tested responsive from 320px to 2560 px and all elements respond appropriately ✅
+
+### CRUD 
+- Logged in user can successfully create a custom recipe ✅
+- Logged in user can successfully access a pre-existing and a custom recipe ✅
+- Logged in user can successfully edit a recipe whether approved or not ✅
+- Logged in user can successfully delete a recipe ✅
+- Logged in user can successfully create a comment ✅
+- Logged in user can successfully access their comment ✅
+- Logged in user can successfully edit their comment ✅
+- Logged in user can successfully delete their comment ✅
+
+### Features
+- Navbar links work as expected ✅
+- Clicking on a post directs the user to the post-detail page ✅
+- Clicking on a recipe directs the user to the recipe-detail page ✅
+- Recipe form submission works as expected ✅
+- Recipe filtering works as expected ✅
+- My recipes page works as expected and only appears for logged-in users ✅
+- Comment submission works as expected ✅
+- Login/logout and register pages work as expected ✅
 
 ## Technologies Used
 
