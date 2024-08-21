@@ -70,6 +70,36 @@ Each page of the blog is displayed clearly through a navbar which offers the use
 
 ![ERD](static/images/readme_images/models-erd-lc.png)
 
+#### Home Page:
+
+![Home-Page-WF](static/images/readme_images/home-page-lc.png)
+
+#### Post Detail Page:
+
+![Post-Detail-WF](static/images/readme_images/post-detail-lc.png)
+
+#### Recipes Page:
+
+![Recipes-Page-WF](static/images/readme_images/recipes-page-lc.png)
+
+#### Recipes Detail Page:
+
+![Recipes-Detail-Page-WF](static/images/readme_images/recipe-detail-lc.png)
+
+#### Recipe Form:
+![Recipe-Form-WF](static/images/readme_images/recipe-form-lc.png)
+
+#### About Page:
+![About-Page-WF](static/images/readme_images/about-us-lc.png)
+
+#### Login Page:
+![Login-Page-WF](static/images/readme_images/login-lc.png)
+
+#### Register Page:
+![Register-Page-WF](static/images/readme_images/register-lc.png)
+
+
+
 ## Testing
 ### Validator Testing
 
