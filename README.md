@@ -99,6 +99,64 @@ Each page of the blog is displayed clearly through a navbar which offers the use
 ![Register-Page-WF](static/images/readme_images/register-lc.png)
 
 
+### Colour Palette:
+![Coolors](static/images/readme_images/color-palette.png)
+
+### Typography:
+Fonts were taken from Google Fonts and I've decided to use the following:
+- Open Sans
+
+### Images:
+Pexels was used for all images available on the website (see reference section).
+
+## Features:
+### Existing Features:
+#### Home Page:
+![Home-Page](static/images/readme_images/home-page.png)
+
+#### Post Detail Page:
+![Post-Detail](static/images/readme_images/post-detail.png)
+
+#### Comments Section:
+![Comments-Section](static/images/readme_images/comments-section.png)
+
+#### Comments Edit/Delete:
+![Comments-Edit/Delete](static/images/readme_images/comment-edit:delete.png)
+
+#### Recipes Page:
+![Recipes-Page](static/images/readme_images/recipes-page.png)
+
+#### Recipes Detail Page:
+![Recipes-Detail](static/images/readme_images/recipes-detail.png)
+
+#### Cuisine Filtering
+![Cuisine-Filtering](static/images/readme_images/cuisine-filtering.png)
+
+#### My Recipes Page:
+![My-Recipes-Page](static/images/readme_images/my-recipes-page.png)
+
+#### Recipe Form:
+![Recipe-Form](static/images/readme_images/recipe-form.png)
+
+#### About Us Page:
+![About-Us](static/images/readme_images/about-us.png)
+
+#### Login Page:
+![Login-Page](static/images/readme_images/login-page.png)
+
+#### Register Page:
+![Register-Page](static/images/readme_images/register.png)
+
+#### Social Media Links:
+![Social-Media-Links](static/images/readme_images/social-media-links.png)
+
+### Future Features:
+- Add a favourite button to recipes and a section where favourited will go.
+- Add alphabetical order filtering.
+- Add commenting to recipes.
+
+
+
 
 ## Testing
 ### Validator Testing
