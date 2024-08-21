@@ -135,10 +135,23 @@ The font element is obsolete.(While true, this error was caused by Summernote du
 - Clicking on a post directs the user to the post-detail page ✅
 - Clicking on a recipe directs the user to the recipe-detail page ✅
 - Recipe form submission works as expected ✅
+- Recipe modification function works as expected ✅
 - Recipe filtering works as expected ✅
 - My recipes page works as expected and only appears for logged-in users ✅
 - Comment submission works as expected ✅
 - Login/logout and register pages work as expected ✅
+
+### Authentication
+- Recipes tab only appear on the navbar for logged-in user ✅
+- If user not logged in navbar includes Register and Login pages ✅
+- If user logged in navbar includes only Logout page ✅
+- Trying to manually access https://the-food-frontier-ff520c1682a7.herokuapp.com/recipes redirects the user to the login page ✅
+- Trying to manually access https://the-food-frontier-ff520c1682a7.herokuapp.com/recipes/my-recipes redirects the user to the login page ✅
+- Trying to manually access https://the-food-frontier-ff520c1682a7.herokuapp.com/recipes/(any-cuisine) redirects the user to the login page ✅
+- Trying to manually access https://the-food-frontier-ff520c1682a7.herokuapp.com/recipes/recipe-form redirects the user to the login page ✅
+
+### Unfixed Bugs
+- Non applicable.
 
 ## Technologies Used
 
