@@ -620,4 +620,5 @@ https://www.pexels.com/photo/donuts-and-bagel-display-205961/
 - Any code taken from an external source is being referenced inside the code as a comment.
 - [Bootstrap](https://getbootstrap.com/docs/4.6/getting-started/introduction/) was used for styling the website.
 - [Django Documentation](https://docs.djangoproject.com/en/4.2/#top) was used for undestanding and implementing specific concecpts which are referenced inside the code.
+- Special thanks to my mentor Lauren-Nicole Popich for her guidance and support throughout this project.
 
