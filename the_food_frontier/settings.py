@@ -13,9 +13,10 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 from pathlib import Path
 import os
 import dj_database_url
+from pathlib import Path
+
 if os.path.isfile('env.py'):
     import env
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
@@ -25,14 +26,13 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-REMOVED_SECRET_KEY = 'django-insecure-c7scnz!5^#wvk9i2naz$r@r7$7f9sam0!\
-h_c3s2#jp_&j0mz&t'
+REMOVED_SECRET_KEY = os.environ.get('REMOVED_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
-    '8000-alexiou981-thefoodfront-fn8ke887xyk.ws.codeinstitute-ide.net',
+    '127.0.0.1',
     '.herokuapp.com',
     ]
 
