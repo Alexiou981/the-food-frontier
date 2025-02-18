@@ -88,7 +88,9 @@ body {
 .recipe_btns {
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 10rem;
+    margin-bottom: 1rem;
 }
 
 /* Ensuring consistency with buttons in recipes.html */
@@ -251,6 +253,21 @@ body {
 }
 
 /* Responsive Design */
+
+/* Responsive Layout for Mobile Screens */
+@media screen and (max-width: 425px) {
+    .recipe_btns {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center; /* Center buttons */
+        gap: 10px;
+    }
+
+    .recipe_btns .btn {
+        width: 100%; /* Make buttons full-width */
+        text-align: center;
+    }
+}
+
 @media screen and (min-width:768px) {
     .navbar > .container-fluid {
         margin-left: 4%;
