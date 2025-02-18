@@ -1,444 +1,115 @@
+:root {
+    --primary-color: #FF6347; /* Tomato Red */
+    --accent-color: #FFD700; /* Bright Yellow */
+    --background-color: #FFF5E1; /* Creamy White */
+    --text-color: #333333; /* Dark Grey */
+    --highlight-color: #FFB6C1; /* Soft Pink */
+}
 
 body {
-    background-color: #cbc2a3;
-    font-family: 'Open Sans', sans-serif !important;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
-img {
-    width: 100%;
-    height: fit-content;
-}
-.brand {
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #4A4A4F;
+.navbar {
+    background-color: var(--primary-color) !important;
+    font-size: 1.2rem;
+    padding: 1rem 1.5rem;
 }
 
-.thin {
-    font-weight: 300;
+.navbar-brand {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white !important;
 }
 
-.light-bg {
-    background-color: #fff;
+.navbar-nav .nav-link {
+    color: white !important;
+    font-weight: bold;
 }
 
-.dark-bg {
-    background-color: #445261;
-}
-
-.main-bg {
-    background-color: #cbc2a3;
+.navbar-nav .nav-link:hover {
+    color: var(--accent-color) !important;
 }
 
 .card {
     border: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
     background-color: transparent;
 }
 
-.image-container {
-    position: relative;
+.card:hover {
+    transform: scale(1.05);
 }
 
-.image-flash {
-    position: absolute;
-    bottom: 5%;
-    min-width: 30%;
-    left: -2px;
-    background-color: #188181;
-}
-
-.scale {
-    width: 100%;
-    height: auto;
-}
-
-.author {
-    color: white;
-    margin: 4px;
-    text-transform: uppercase;
-}
-
-.masthead {
-    margin-top: 10px;
-    overflow: hidden;
-    position: relative;
-    display: inline-block;
-    width: 100%;
-}
-
-.masthead-text {
-    background-color: #445261;
-    color: white;
-    position: relative;
-}
-
-.masthead-image {
-    position: relative;
-    overflow: hidden;
-}
-
-.post-link {
-    text-decoration: none;
-    color: #445261;
-}
-
-.post-link:hover,
-.page-link {
-    color: #E84610;
-}
-
-.post-title {
-    margin-top: 10%;
-    margin-left: 5%;
-}
-
-.post-subtitle {
-    margin-left: 5%;
-    color: lightgray;
-}
-
-.btn-signup,
-.btn-edit {
-    background-color: #188181;
-    color: #fff;
-}
-
-.btn-signup:hover,
-.btn-signup:active {
-    background-color: #fff;
-    color: #23BBBB;
-}
-
-.link {
-    color: #23BBBB;
-    text-decoration: none;
-}
-
-.link:hover,
-.link:active {
-    color: #445261;
-    text-decoration: underline;
-}
-
-.btn-like {
-    color: #E84610;
-    border: none;
-    background: transparent;
-}
-
-.btn-delete {
-    color: #fff;
-    background: #E84610;
-}
-
-.btn-like:hover,
-.btn-like:active {
-    color: #E84610;
-    background: transparent;
-    border: none;
-}
-
-.faded {
-    color: rgb(172, 175, 175);
-}
-
-.approval {
-    color: rgb(222, 146, 168);
-}
-
-/* style rule for page counter if page is paginated */
-.page-counter {
-    display: flex;
-}
-
-/* style rule for add your own recipe question */
-.create-recipe-question {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* style rule for recipes pending to be approved */
-.pending-recipes {
-    background-color: rgba(118, 118, 118, 0.883);
-}
-
-/* style rule for my recipes and my favourites navbar */
-nav.users_recipes{
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 2rem;
-}
-
-/* sets navigation pages to the far right of the screen when not collapsed */
-.navigation-pages {
-    justify-content: flex-end;
-}
-
-/* style rule for quote under page title */
-.name-quote > p {
-    font-size: 75%;
-}
-
-/* style rule for logged in user display */
-.logged-in-user {
-    font-size: 70%;
-    text-decoration: underline;
-}
-
-/* style rule for social media links */
-
-.sm-links > a {
-    font-size: x-large;
-    color: black;
-}
-
-/* style rule for post title */
-h2.card-title{
+.card-title {
+    color: var(--primary-color);
+    font-weight: bold;
     padding-top: .5rem;
     font-size: medium;
 }
 
-h2.card-title.recipes {
-    font-size: larger !important;
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
 }
 
-/* style rule for post-detail title */
-h1.post-title{
-    font-size:large;
+.btn-primary:hover {
+    background-color: var(--accent-color);
 }
 
-/* style rule for post-detail body */
-
-.card-body p font {
-    font-family: 'Open Sans' !important;
-}
-
-.card-body p span {
-    font-size: medium !important;
-}
-
-/* style rule for comments section */
-.row.comments {
-    background: lightyellow;
-    margin-bottom: 2%;
-}
-
-/* style rule for masthead text container */
-
-.col-md-6.masthead-text {
-    padding: 0 5%;
-}
-
-/* style rule for excerpt of recipe */
-.recipe-excerpt {
-    font-size: small !important;
-    font-family: 'Open Sans' !important;
-    padding: 0 5%;
-}
-
-/* style rules for ingredients container */
-#recipe-ingredients {
-    background-color: #f0fff026;
-    height: fit-content;
-    padding: 0.5rem 2rem;
-}
-
-.card-text p span {
-    font-size: medium !important;
-}
-
-/* style rules for instructions container */
-#recipe-instructions {
-    background-color: #f0fff026;
-    padding: 0.5rem 2rem;
-}
-
-.card-text p font {
-    font-family: 'Open Sans', sans-serif !important;
-}
-
-/* style rules for about section */
-.masthead-text.about {
-    background-color: #445261;
+.footer {
+    background-color: var(--primary-color);
     color: white;
-    position: relative;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.sm-links > a {
+    font-size: xx-large;
+    color: var(--accent-color) !important;
+    transition: color 0.3s ease-in-out;
+}
+
+.sm-links > a:hover {
+    color: white !important;
+}
+
+.bg-overlay {
+    background: linear-gradient(135deg, rgba(255,99,71,0.9), rgba(255,215,0,0.9));
+    padding: 2rem;
+    color: white;
+    border-radius: 10px;
+}
+
+/* Rule for recipes buttons */
+.recipe_btns {
+    width: 100%;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: baseline;
+    justify-content: space-around;
 }
 
-/* style rules for recipe form */
-iframe#id_excerpt_iframe {
-    width: 100%;
-}
-
-iframe#id_ingredients_iframe {
-    width: 100%;
-}
-
-iframe#id_instructions_iframe {
-    width: 100%;
-}
-
-
-/* media query for 768px screens and larger */
-@media screen and (min-width:768px){
-    /* style rules for navbar */
-    .navbar > .container-fluid{
+/* Responsive Design */
+@media screen and (min-width:768px) {
+    .navbar > .container-fluid {
         margin-left: 4%;
         margin-right: 4%;
     }
-    .name-quote > p {
-        font-size: 80%;
+    
+    .navbar-brand {
+        font-size: 2.5rem;
     }
-
-    .logged-in-user {
-        font-size: 90%;
-        text-decoration: underline;
-    }
-
-    /* style rule for social media links */
-    .creator {
+    
+    .card-title {
         font-size: large;
     }
-
-    .sm-links {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-evenly;
-        margin-left: 25%;
-        margin-right: 25%;
-    }
-
-    .sm-links > a {
-        font-size: xx-large;
-        color: black;
-    }
-
-    /* style rule for post title */
-        h2.card-title{
-        font-size: large;
-    }
-
-    /* style rule for post-detail title */
-        h1.post-title{
-        font-size:larger;
-    }
-
-        .col-md-6{
-        align-content: center;
-    }
-
-    /* style rule for recipe details */
-    .card-body.recipe{
-        display: flex;
-        flex-direction: row;   
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        padding: 0;
-    }
-
-    div#recipe-ingredients{
-        width: 30%;
-    }
-
-    div#recipe-instructions{
-        width: 65%;
-    }
-    /* style rule for about page */
-    .masthead-text.about {
-        align-items: center;
-    }
-
-    /* style rule for about image */
-    .d-md-block.col-md-8.masthead-image.about {
-        height: 20vh;
-    }
 }
 
-/* media query for 1024px screens and larger */
-@media screen and (min-width:1024px){
-    /* style rules for navbar */
-    .navbar > .container-fluid{
-        align-items: normal;
-    }
-
-    /* style rule for post-detail title */
-    h1.post-title{
-        font-size:x-large;
-    }
-
-    /* style rule for about image */
-    .d-md-block.col-md-8.masthead-image.about {
-        height: 25vh;
-    }
-
-}
-
-/* media query for 1440px screens and larger */
-@media screen and (min-width:1440px){
-    /* style rules for navbar */
-
-    .name-quote > p {
-        font-size: 100%;
-    }
-
-    .logged-in-user {
-        font-size: 110%;
-        text-decoration: underline;
-    }
-
-    .sm-links {
-        margin-left: 40%;
-        margin-right: 40%;
-    }
-
-    .sm-links > a {
-        font-size: xx-large;
-        color: black;
-    }
-
-    /* style rule for post title */
-    h2.card-title{
-        padding-top: .5rem;
-        font-size: x-large;
-    }
-
-    /* style rule for post container */
-    .col-12.mt-3 {
-        padding: 0 5% 0 5%;
-    }
-
-}
-
-@media screen and (min-width:2560px){
-    /* style rule for post container */
-    .navbar > .container-fluid{
-        margin-left: 15%;
-        margin-right: 15%;
-    }
-
-    #navbarText{
-        font-size: larger;
-    }
-
-    .creator{
-        font-size: x-large;
-    }
-
-    .col-12.mt-3 {
-        padding-right: 15%;
-        padding-left: 15%;
-    }
-
-    .col-md-4{
-        padding: 3rem;
-    }
-
-    .container {
-        max-width: 1800px;
+@media screen and (min-width:1440px) {
+    .navbar > .container-fluid {
+        margin-left: 10%;
+        margin-right: 10%;
     }
 }
