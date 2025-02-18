@@ -38,6 +38,8 @@ body {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
     background-color: transparent;
+    height: 90%;
+    min-height:350px;
 }
 
 .card:hover {
@@ -46,9 +48,32 @@ body {
 
 .card-title {
     color: var(--primary-color);
-    font-weight: bold;
+    font-weight: normal;
     padding-top: .5rem;
-    font-size: medium;
+    font-size: large;
+}
+
+/* Underline Blog Post Titles with Button Color */
+.card-title {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--primary-color); /* Button color */
+}
+
+/* Ensure the card body expands to fill the height */
+.card-body {
+    flex-grow: 1; /* Makes the content fill available space */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ensure the card body expands to fill the height */
+.card-body {
+    flex-grow: 1; /* Makes the content fill available space */
+    display: flex;
+    flex-direction: column;
 }
 
 .btn-primary {
@@ -231,6 +256,9 @@ body {
 
 .pagination {
     margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
 }
 
 .text-warning {
