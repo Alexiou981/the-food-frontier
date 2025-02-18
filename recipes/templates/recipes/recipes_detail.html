@@ -1,5 +1,5 @@
-
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %}
+{% block content %}
 {% load static %}
 
 <div class="masthead">
@@ -7,94 +7,75 @@
         <div class="row g-0">
             <div class="col-md-6 masthead-text">
                 <h1 class="post-title">{{ recipe.title }}</h1>
-                <p class="post-subtitle">{{ recipe.author }} | {{ recipe.created_on }} 
-                    | {{ recipe.get_cuisine_display }} cuisine</p>
+                <p class="post-subtitle">{{ recipe.author }} | {{ recipe.created_on }} | {{ recipe.get_cuisine_display }} cuisine</p>
                 <div class="recipe-excerpt">{{ recipe.excerpt|safe }}</div>
             </div>
             <div class="d-md-block col-md-6 masthead-image">
-              <div class="image-container">
-                {% if recipe.cuisine == 0 %}
-                <img class="card-img-top" src="{% static 'images/mediterranean.jpg' %}"
-                    alt="placeholder image">
-                {% elif recipe.cuisine == 1 %}
-                <img class="card-img-top" src="{% static 'images/asian.jpg' %}" alt="placeholder image">
-                {% elif recipe.cuisine == 2 %}
-                <img class="card-img-top" src="{% static 'images/middle-eastern.jpg' %}"
-                    alt="placeholder image">
-                {% elif recipe.cuisine == 3 %}
-                <img class="card-img-top" src="{% static 'images/european.jpg' %}"
-                    alt="placeholder image">
-                {% elif recipe.cuisine == 4 %}
-                <img class="card-img-top" src="{% static 'images/african.jpg' %}"
-                    alt="placeholder image">
-                {% elif recipe.cuisine == 5 %}
-                <img class="card-img-top" src="{% static 'images/american.jpg' %}"
-                    alt="placeholder image">
-                {% elif recipe.cuisine == 6 %}
-                <img class="card-img-top" src="{% static 'images/latin-american.jpg' %}"
-                    alt="placeholder image">
-                {% elif recipe.cuisine == 7 %}
-                <img class="card-img-top" src="{% static 'images/caribbean.jpg' %}"
-                    alt="placeholder image">
-                {% elif recipe.cuisine == 8 %}
-                <img class="card-img-top" src="{% static 'images/desserts.jpg' %}"
-                    alt="placeholder image">
-                {% else %}
-                <img class="card-img-top" src="#" alt="{{ recipe.title }}">
-                {% endif %}
-            </div>
+                <div class="image-container">
+                    {% if recipe.cuisine == 0 %}
+                    <img class="card-img-top" src="{% static 'images/mediterranean.jpg' %}" alt="Mediterranean">
+                    {% elif recipe.cuisine == 1 %}
+                    <img class="card-img-top" src="{% static 'images/asian.jpg' %}" alt="Asian">
+                    {% elif recipe.cuisine == 2 %}
+                    <img class="card-img-top" src="{% static 'images/middle-eastern.jpg' %}" alt="Middle Eastern">
+                    {% elif recipe.cuisine == 3 %}
+                    <img class="card-img-top" src="{% static 'images/european.jpg' %}" alt="European">
+                    {% elif recipe.cuisine == 4 %}
+                    <img class="card-img-top" src="{% static 'images/african.jpg' %}" alt="African">
+                    {% elif recipe.cuisine == 5 %}
+                    <img class="card-img-top" src="{% static 'images/american.jpg' %}" alt="American">
+                    {% elif recipe.cuisine == 6 %}
+                    <img class="card-img-top" src="{% static 'images/latin-american.jpg' %}" alt="Latin American">
+                    {% elif recipe.cuisine == 7 %}
+                    <img class="card-img-top" src="{% static 'images/caribbean.jpg' %}" alt="Caribbean">
+                    {% elif recipe.cuisine == 8 %}
+                    <img class="card-img-top" src="{% static 'images/desserts.jpg' %}" alt="Desserts">
+                    {% else %}
+                    <img class="card-img-top" src="#" alt="{{ recipe.title }}">
+                    {% endif %}
+                </div>
             </div>
         </div>
     </div>
 </div>
+
 <div class="container">
     {% if recipe.author == user %}
-    <div class="recipe-mod-btns">
-        <button class="btn btn-delete">Delete Recipe</button>
+    <div class="recipe-mod-btns text-center mt-3">
         <a href="{% url 'recipe_edit' slug=recipe.slug %}" class="btn btn-edit">Edit Recipe</a>
+        <button class="btn btn-delete" data-bs-toggle="modal" data-bs-target="#deleteModal">Delete Recipe</button>
     </div>
     {% endif %}  
     <div class="row">
-        <div class="col card mb-4  mt-3 left  top">
+        <div class="col card mb-4 mt-3">
             <div class="card-body recipe">
-                <div class="col-md-4" id="recipe-ingredients">
-                <!-- Use the | safe filter inside the template tags -->
-                <div class="card-text">
-                    {{ recipe.ingredients | safe }}
-                </div>
-                </div>
-                <br>
-                <div class="col-md-8" id="recipe-instructions">
-                <div class="card-text">
-                    {{ recipe.instructions | safe }}
-                </div>
+                <div class="row">
+                    <div class="col-md-4 recipe-section" id="recipe-ingredients">
+                        <div class="card-text">{{ recipe.ingredients | safe }}</div>
+                    </div>
+                    <div class="col-md-8 recipe-section" id="recipe-instructions">
+                        <div class="card-text">{{ recipe.instructions | safe }}</div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!-- Delete confirmation modal taken from the CI codestar project-->
-<div class="modal fade" id="deleteModal" tabindex="-1"
-  aria-labelledby="deleteModalLabel" aria-hidden="true">
+
+<!-- Delete Confirmation Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title"
-          id="deleteModalLabel">Delete recipe?</h5>
-        <button type="button" class="btn-close"
-          data-bs-dismiss="modal" aria-label="Close"></button>
+        <h5 class="modal-title" id="deleteModalLabel">Delete recipe?</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        Are you sure you want to delete your recipe?
-        This action cannot be undone.
+        Are you sure you want to delete your recipe? This action cannot be undone.
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary"
-          data-bs-dismiss="modal">Close</button>
-        <!-- When clicking Delete on the modal, the user gets redirected to the recipes page,
-         where a confirmation message appears that the recipe was successfully deleted. -->  
-        <a id="deleteConfirm" href="{% url 'delete_recipe' recipe.slug %}" class="btn
-          btn-danger">Delete</a>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <a id="deleteConfirm" href="{% url 'delete_recipe' recipe.slug %}" class="btn btn-danger">Delete</a>
       </div>
     </div>
   </div>

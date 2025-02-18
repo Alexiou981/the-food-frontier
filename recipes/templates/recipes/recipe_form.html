@@ -5,22 +5,20 @@
 
 <div class="container mt-5">
     <div class="row justify-content-center">
-        <div class="col-12 col-md-6 my-5">
-            <h2>Let's get creative</h2>
-            <p>Whether it was a recipe that reminds you of your childhood,
-            or a recipe that you leanred whilst travelling, or a recipe
-            that you enjoy cooking on a daily basis. We'd love to read it,
-            and so would all the readers of this blog. It can be literally
-            anything! 
+        <div class="col-12 col-md-6 form-container my-5">
+            <h2 class="text-center">Let's Get Creative!</h2>
+            <p class="text-muted text-center">
+                Whether it’s a childhood favorite, a recipe learned while traveling, 
+                or something you enjoy cooking daily—we’d love to read it! 
             </p>
             
-            <form method="post">
-            {{ recipe_form | crispy }}
-            {% csrf_token %}
-            <button class="btn btn-secondary"
-            type="submit">Submit</button>
+            <form method="post" class="recipe-form">
+                {{ recipe_form | crispy }}
+                {% csrf_token %}
+                <button class="btn btn-primary btn-lg w-100 mt-3" type="submit">Submit Recipe</button>
             </form>
         </div>
     </div>
 </div>
+
 {% endblock content %}

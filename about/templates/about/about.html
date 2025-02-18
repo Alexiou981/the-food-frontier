@@ -1,33 +1,28 @@
-<!-- Template taken from the Code Institute, Codestar repository -->
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %} 
+{% block content %}
 {% load static %}
 
 <div class="masthead">
     <div class="container">
         <div class="row g-0">
             <div class="col-md-4 masthead-text about">
-                <!-- About title goes in these h1 tags -->
-                <br>
-                <br>
                 <h1 class="post-title">{{ about.title }}</h1>
             </div>
             <div class="d-md-block col-md-8 masthead-image about">
-                <img src="{% static 'images/about.jpg' %}" id ="about-img" class="scale" alt="placeholder">
+                <img src="{% static 'images/about.jpg' %}" id="about-img" class="scale" alt="About Us">
             </div>
-        </div>
-        <div>
         </div>
     </div>
 </div>
+
 <div class="container">
     <div class="row">
-        <div class="col card mb-4  mt-3 left  top">
+        <div class="col card mb-4 mt-3 left top">
             <div class="card-body">
-                <!-- Use the | safe filter inside the template tags -->
-                <p class="card-text">
-                    {{ about.content | safe }}
+                <p class="card-text">{{ about.content | safe }}</p>
             </div>
         </div>
     </div>
 </div>
+
 {% endblock content %}
