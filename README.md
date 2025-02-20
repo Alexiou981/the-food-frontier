@@ -102,12 +102,6 @@ Pexels was used for all images available on the website (see reference section).
 #### Post Detail Page:
 ![Post-Detail](static/images/readme_images/post-detail.png)
 
-#### Comments Section:
-![Comments-Section](static/images/readme_images/comments-section.png)
-
-#### Comments Edit/Delete:
-![Comments-Edit/Delete](static/images/readme_images/comment-edit:delete.png)
-
 #### Recipes Page:
 ![Recipes-Page](static/images/readme_images/recipes-page.png)
 
