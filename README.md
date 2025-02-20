@@ -154,7 +154,7 @@ Pexels was used for all images available on the website (see reference section).
 - filtered_cuisines.html passed through HTML validator withour errors or warnings ✅
 - recipe_form.html passed through HTML validator withour errors or warnings ✅
 - post-detail.html passed through HTML validator with the following error:
-The font element is obsolete.(While true, this error was caused by Summernote due to choosing a font when submitting the recipes from the admin panel to populate the page. The font family of the body is set as 'Open Sans' inside the style.css file.)
+The font element is obsolete.(While true, this error was caused by Summernote due to choosing a font when submitting the recipes from the admin panel to populate the page. The font family of the body is set as 'Poppins' inside the style.css file.)
 
 #### Stylesheets:
 - style.css passed through the W3C CSS validator withour any errors or warnings ✅
