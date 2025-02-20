@@ -69,13 +69,6 @@ body {
     flex-direction: column;
 }
 
-/* Ensure the card body expands to fill the height */
-.card-body {
-    flex-grow: 1; /* Makes the content fill available space */
-    display: flex;
-    flex-direction: column;
-}
-
 .btn-primary {
     background-color: var(--primary-color);
     border: none;
@@ -280,97 +273,33 @@ body {
     border-bottom: 2px solid var(--accent-color); /* Changes color on hover */
 }
 
-/* Style for Login & Logout Buttons */
-.login-btn, .logout-btn {
-    background-color: #FF6347 !important; /* Tomato Red */
-    color: white !important;
-    border: none;
-    padding: 10px 20px;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background 0.3s ease-in-out;
-    width: 100%;
-    max-width: 250px;
-    margin-top: 15px;
-}
-
-.login-btn:hover, .logout-btn:hover {
-    background-color: #e5533d !important; /* Slightly darker red */
-    color: white !important;
-}
-
-/* Center the login & logout forms */
-.login-container, .logout-container {
-    margin-top: 50px;
-    text-align: center;
-}
-
-/* Ensure the login text and form align nicely */
-.login-text {
-    font-size: 16px;
-    margin-bottom: 20px;
-    line-height: 1.5;
-}
-
-/* Style the Sign Up link */
-.login-text .link {
-    color: #FF6347;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.login-text .link:hover {
-    text-decoration: underline;
-}
-
 /* Responsive Design */
 
 /* Responsive Layout for Mobile Screens */
 @media screen and (max-width: 425px) {
     .recipe_btns {
-        flex-direction: column; /* Stack buttons vertically */
-        align-items: center; /* Center buttons */
+        flex-direction: column;
+        align-items: center;
         gap: 10px;
     }
 
     .recipe_btns .btn {
-        width: 100%; /* Make buttons full-width */
+        width: 100%;
         text-align: center;
     }
 }
 
-/* Center and resize on mobile screens */
 @media (max-width: 425px) {
     .navbar-brand {
-        font-size: 1.5rem;  /* Make it smaller on mobile */
+        font-size: 1.5rem;
         display: block;
         text-align: center;
         width: 100%;
     }
-    
-    /* Ensure navbar items are stacked properly */
+
     .navbar-nav {
         text-align: center;
         width: 100%;
-    }
-    
-    .navbar-toggler {
-        margin: auto;
-        padding: 0.2rem;
-        font-size: var(--bs-navbar-toggler-font-size);
-        line-height: 1;
-        color: var(--bs-navbar-color);
-        background-color: transparent;
-        border: var(--bs-border-width) solid var(--bs-navbar-toggler-border-color);
-        border-radius: var(--bs-navbar-toggler-border-radius);
-        transition: var(--bs-navbar-toggler-transition);
-    }
-
-    /* Ensure nav list font is medium on mobile screens */
-
-    ul.navbar-nav.ms-auto.mobile-list {
-        font-size: medium;
     }
 }
 
@@ -378,14 +307,6 @@ body {
     .navbar > .container-fluid {
         margin-left: 4%;
         margin-right: 4%;
-    }
-    
-    .navbar-brand {
-        font-size: 2.5rem;
-    }
-    
-    .card-title {
-        font-size: large;
     }
 }
 
