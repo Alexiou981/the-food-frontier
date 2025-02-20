@@ -2,88 +2,100 @@
 {% load static %}
 {% block content %}
 
-<!-- my_recipes.html content starts here -->
+<!-- Recipes Navigation -->
 <nav class="users_recipes">
-    <a href="{% url 'recipe_form' %}" class="btn btn-secondary" type="button">Add a Recipe</a>
+    <a href="{% url 'recipe_form' %}" class="btn btn-primary">Add a Recipe</a>
 </nav>
-<div class="container-fluid">
+
+<!-- Recipes Grid -->
+<div class="container mt-4">
     <div class="row">
-        <!-- Blog Entries Column -->
-        <div class="col-12 mt-3 left">
-            <div class="row">
-                {% if recipe_list %}
-                    {% for recipe in recipe_list %}
-                        {% if recipe.approval_status or recipe.author == user %}
-                            <div class="col-md-4">
-                                <div class="card mb-4 {% if not recipe.approval_status and recipe.author == user %} pending-recipes {% endif %}">
-                                    <div class="card-body">
-                                        <div class="image-container">
-                                            {% if recipe.cuisine == 0 %}
-                                                <img class="card-img-top" src="{% static 'images/mediterranean.jpg' %}" alt="placeholder image">
-                                            {% elif recipe.cuisine == 1 %}
-                                                <img class="card-img-top" src="{% static 'images/asian.jpg' %}" alt="placeholder image">
-                                            {% elif recipe.cuisine == 2 %}
-                                                <img class="card-img-top" src="{% static 'images/middle-eastern.jpg' %}" alt="placeholder image">
-                                            {% elif recipe.cuisine == 3 %}
-                                                <img class="card-img-top" src="{% static 'images/european.jpg' %}" alt="placeholder image">
-                                            {% elif recipe.cuisine == 4 %}
-                                                <img class="card-img-top" src="{% static 'images/african.jpg' %}" alt="placeholder image">
-                                            {% elif recipe.cuisine == 5 %}
-                                                <img class="card-img-top" src="{% static 'images/american.jpg' %}" alt="placeholder image">
-                                            {% elif recipe.cuisine == 6 %}
-                                                <img class="card-img-top" src="{% static 'images/latin-american.jpg' %}" alt="placeholder image">
-                                            {% elif recipe.cuisine == 7 %}
-                                                <img class="card-img-top" src="{% static 'images/caribbean.jpg' %}" alt="placeholder image">
-                                            {% elif recipe.cuisine == 8 %}
-                                                <img class="card-img-top" src="{% static 'images/desserts.jpg' %}" alt="placeholder image">
-                                            {% else %}
-                                                <img class="card-img-top" src="#" alt="{{ recipe.title }}">
-                                            {% endif %}
-                                        </div>
-                                        <a href="{% url 'recipes_detail' recipe.slug %}" class="post-link">
-                                            <h2 class="card-title">{{ recipe.title }}</h2>
-                                            <p>Author: {{ recipe.author }}</p>
-                                        </a>
-                                        <hr />
-                                        {% if not recipe.approval_status and recipe.author == user %}
-                                            <p style="color: white"> This recipe is awaiting approval.</p>
-                                        {% endif %}
-                                        <p class="card-text text-muted h6">Cuisine: {{ recipe.get_cuisine_display }}</p>
-                                        <hr />
-                                        <p class="card-text text-muted h6">{{ recipe.created_on }}</p>
-                                    </div>
-                                </div>
+        {% if recipe_list %}
+            {% for recipe in recipe_list %}
+                {% if recipe.approval_status or recipe.author == user %}
+                <div class="col-md-4">
+                    <div class="card mb-4 {% if not recipe.approval_status and recipe.author == user %} pending-recipes {% endif %}">
+                        <div class="card-body">
+                            <!-- Recipe Image -->
+                            <div class="image-container">
+                                {% if recipe.cuisine == 0 %}
+                                    <img class="card-img-top" src="{% static 'images/mediterranean.jpg' %}" alt="Mediterranean">
+                                {% elif recipe.cuisine == 1 %}
+                                    <img class="card-img-top" src="{% static 'images/asian.jpg' %}" alt="Asian">
+                                {% elif recipe.cuisine == 2 %}
+                                    <img class="card-img-top" src="{% static 'images/middle-eastern.jpg' %}" alt="Middle Eastern">
+                                {% elif recipe.cuisine == 3 %}
+                                    <img class="card-img-top" src="{% static 'images/european.jpg' %}" alt="European">
+                                {% elif recipe.cuisine == 4 %}
+                                    <img class="card-img-top" src="{% static 'images/african.jpg' %}" alt="African">
+                                {% elif recipe.cuisine == 5 %}
+                                    <img class="card-img-top" src="{% static 'images/american.jpg' %}" alt="American">
+                                {% elif recipe.cuisine == 6 %}
+                                    <img class="card-img-top" src="{% static 'images/latin-american.jpg' %}" alt="Latin American">
+                                {% elif recipe.cuisine == 7 %}
+                                    <img class="card-img-top" src="{% static 'images/caribbean.jpg' %}" alt="Caribbean">
+                                {% elif recipe.cuisine == 8 %}
+                                    <img class="card-img-top" src="{% static 'images/desserts.jpg' %}" alt="Desserts">
+                                {% else %}
+                                    <img class="card-img-top" src="#" alt="{{ recipe.title }}">
+                                {% endif %}
                             </div>
-                            {% if forloop.counter|divisibleby:3 %}
-                                </div><div class="row">
+
+                            <!-- Recipe Title & Author -->
+                            <a href="{% url 'recipes_detail' recipe.slug %}" class="post-link">
+                                <h2 class="card-title recipes">{{ recipe.title }}</h2>
+                            </a>
+                            <p class="text-muted"><strong>Author:</strong> {{ recipe.author }}</p>
+
+                            <hr>
+
+                            <!-- Recipe Status -->
+                            {% if not recipe.approval_status and recipe.author == user %}
+                                <p class="text-danger"><strong>Awaiting Approval</strong></p>
                             {% endif %}
-                        {% endif %}
-                    {% endfor %}
-                {% else %}
-                    <div class="col-12">
-                        <p>You haven't added any recipes yet.</p>
+
+                            <p class="card-text"><strong>Cuisine:</strong> {{ recipe.get_cuisine_display }}</p>
+                            <p class="card-text text-muted"><small>Published on {{ recipe.created_on }}</small></p>
+                        </div>
                     </div>
+                </div>
+                {% if forloop.counter|divisibleby:3 %}
+                    </div><div class="row">
                 {% endif %}
+                {% endif %}
+            {% endfor %}
+        {% else %}
+            <div class="col-12 text-center">
+                <p class="text-muted">You haven't added any recipes yet.</p>
             </div>
-        </div>
+        {% endif %}
     </div>
-    {% if is_paginated %}
-        <nav aria-label="Page navigation">
-            <span class="page-counter justify-content-center">
-                Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
-            </span>
-            <ul class="pagination justify-content-center">
-                {% if page_obj.has_previous %}
-                    <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link"> &laquo; PREV </a></li>
-                {% endif %}
-                {% if page_obj.has_next %}
-                    <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
-                {% endif %}
-                <hr />
-            </ul>
-        </nav>
-    {% endif %}
 </div>
 
-<!-- my_recipes.html content ends here -->
+<!-- Pagination -->
+{% if is_paginated %}
+<nav aria-label="Page navigation" class="mt-4">
+    <div class="page-counter text-center mb-2">
+        <strong>Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</strong>
+    </div>
+    <ul class="pagination justify-content-center">
+        {% if page_obj.has_previous %}
+        <li class="page-item">
+            <a href="?page={{ page_obj.previous_page_number }}" class="btn btn-primary">&laquo; PREV</a>
+        </li>
+        {% endif %}
+
+        <li class="page-item active">
+            <span class="btn btn-secondary disabled">{{ page_obj.number }}</span>
+        </li>
+
+        {% if page_obj.has_next %}
+        <li class="page-item">
+            <a href="?page={{ page_obj.next_page_number }}" class="btn btn-primary">NEXT &raquo;</a>
+        </li>
+        {% endif %}
+    </ul>
+</nav>
+{% endif %}
+
 {% endblock %}

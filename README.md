@@ -89,7 +89,8 @@ Each page of the blog is displayed clearly through a navbar which offers the use
 
 ### Typography:
 Fonts were taken from Google Fonts and I've decided to use the following:
-- Open Sans
+- 'Poppins'
+- 'Sans-serif'
 
 ### Images:
 Pexels was used for all images available on the website (see reference section).
@@ -125,6 +126,9 @@ Pexels was used for all images available on the website (see reference section).
 
 #### Register Page:
 ![Register-Page](static/images/readme_images/register.png)
+
+#### Logout Page:
+![Logout-Page](static/images/readme_images/logout.png)
 
 #### Social Media Links:
 ![Social-Media-Links](static/images/readme_images/social-media-links.png)
@@ -198,10 +202,6 @@ The font element is obsolete.(While true, this error was caused by Summernote du
 - Logged in user can successfully access a pre-existing and a custom recipe ✅
 - Logged in user can successfully edit a recipe whether approved or not ✅
 - Logged in user can successfully delete a recipe ✅
-- Logged in user can successfully create a comment ✅
-- Logged in user can successfully access their comment ✅
-- Logged in user can successfully edit their comment ✅
-- Logged in user can successfully delete their comment ✅
 
 ### Features
 - Navbar links work as expected ✅
@@ -211,7 +211,6 @@ The font element is obsolete.(While true, this error was caused by Summernote du
 - Recipe modification function works as expected ✅
 - Recipe filtering works as expected ✅
 - My recipes page works as expected and only appears for logged-in users ✅
-- Comment submission works as expected ✅
 - Login/logout and register pages work as expected ✅
 
 ### Authentication
@@ -227,6 +226,11 @@ The font element is obsolete.(While true, this error was caused by Summernote du
 - Non applicable.
 
 ## Technologies Used
+
+## Implementations for Submission
+- SECRET_KEY previously exposed is now changed, stored in a .env file which is included in the .gitignore file. The settings.py file with the exposed SECRET_KEY has been successfuly deleted and history rewritten without any errors.
+
+- Comment's section removed since it was not an original and not functional hence unnecessary to include in the project for submission.
 
 ### Languages:
 - HTML5
