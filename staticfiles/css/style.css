@@ -38,6 +38,8 @@ body {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
     background-color: transparent;
+    height: 90%;
+    min-height:350px;
 }
 
 .card:hover {
@@ -46,9 +48,32 @@ body {
 
 .card-title {
     color: var(--primary-color);
-    font-weight: bold;
+    font-weight: normal;
     padding-top: .5rem;
-    font-size: medium;
+    font-size: large;
+}
+
+/* Underline Blog Post Titles with Button Color */
+.card-title {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--primary-color); /* Button color */
+}
+
+/* Ensure the card body expands to fill the height */
+.card-body {
+    flex-grow: 1; /* Makes the content fill available space */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ensure the card body expands to fill the height */
+.card-body {
+    flex-grow: 1; /* Makes the content fill available space */
+    display: flex;
+    flex-direction: column;
 }
 
 .btn-primary {
@@ -68,11 +93,209 @@ body {
 }
 
 .sm-links > a {
-    font-size: x-large;
+    font-size: xx-large;
+    color: var(--accent-color) !important;
+    transition: color 0.3s ease-in-out;
+}
+
+.sm-links > a:hover {
+    color: white !important;
+}
+
+.bg-overlay {
+    background: linear-gradient(135deg, rgba(255,99,71,0.9), rgba(255,215,0,0.9));
+    padding: 2rem;
+    color: white;
+    border-radius: 10px;
+}
+
+/* Rule for recipes buttons */
+.recipe_btns {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+    margin-bottom: 1rem;
+}
+
+/* Ensuring consistency with buttons in recipes.html */
+.users_recipes {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.users_recipes .btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    transition: background 0.3s ease-in-out;
+}
+
+.users_recipes .btn:hover {
+    background-color: var(--accent-color);
     color: black;
 }
 
+/* Recipe Form Styling */
+.form-container {
+    background: #FFF5E1;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-form {
+    margin-top: 1rem;
+}
+
+.recipe-form .btn {
+    font-size: 1.2rem;
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    transition: background 0.3s ease-in-out;
+}
+
+.recipe-form .btn:hover {
+    background-color: var(--accent-color);
+    color: black;
+}
+
+/* About Page Styling */
+.masthead-text.about {
+    background: linear-gradient(135deg, rgba(255,99,71,0.9), rgba(255,215,0,0.9));
+    color: white;
+    padding: 3rem;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.masthead-image.about img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card {
+    background: #FFF5E1;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/* Recipe Detail Page Styling */
+.masthead-text {
+    background: linear-gradient(135deg, rgba(255,99,71,0.9), rgba(255,215,0,0.9));
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.masthead-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.recipe-mod-btns .btn {
+    margin: 10px;
+    padding: 10px 20px;
+}
+
+.recipe-section {
+    background: #FFF5E1;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.recipe-section h4 {
+    color: #FF6347;
+    font-weight: bold;
+}
+
+/* Delete Modal Styling */
+.modal-content {
+    border-radius: 10px;
+}
+
+/* Filtered Cuisine Page Styling */
+.users_recipes {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.users_recipes .btn {
+    font-size: 1rem;
+    padding: 10px 15px;
+}
+
+.card {
+    background: #FFF5E1;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.text-warning {
+    color: #FFA500;
+}
+
+/* Recipe Titles Styling */
+.card-title.recipes {
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+    border-bottom: solid var(--primary-color); /* Matches button color */
+}
+
+.card-title.recipes:hover {
+    color: var(--accent-color);
+    border-bottom: 2px solid var(--accent-color); /* Changes color on hover */
+}
+
 /* Responsive Design */
+
+/* Responsive Layout for Mobile Screens */
+@media screen and (max-width: 425px) {
+    .recipe_btns {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center; /* Center buttons */
+        gap: 10px;
+    }
+
+    .recipe_btns .btn {
+        width: 100%; /* Make buttons full-width */
+        text-align: center;
+    }
+}
+
 @media screen and (min-width:768px) {
     .navbar > .container-fluid {
         margin-left: 4%;
