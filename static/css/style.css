@@ -327,6 +327,7 @@ body {
 
     ul.navbar-nav.ms-auto.mobile-list {
         font-size: medium;
+    }
 }
 
 @media screen and (min-width:768px) {
