@@ -280,6 +280,23 @@ body {
     border-bottom: 2px solid var(--accent-color); /* Changes color on hover */
 }
 
+/* Logout button styling */
+.logout-btn {
+    background-color: #FF6347 !important; /* Tomato Red */
+    color: white !important;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.logout-btn:hover {
+    background-color: #e5533d !important; /* Slightly darker shade */
+    color: white !important;
+}
+
 /* Responsive Design */
 
 /* Responsive Layout for Mobile Screens */
