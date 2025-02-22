@@ -25,7 +25,7 @@ load_dotenv()
 DATABASE_URL = os.getenv("DATABASE_URL")
 
 if not DATABASE_URL:
-    raise ImproperlyConfigured("DATABASE_URL is not set in the environment variables")
+    raise ImproperlyConfigured("DATABASE_URL not set in evn variables")
 
 DATABASES = {
     'default': dj_database_url.config(default=DATABASE_URL, conn_max_age=600)
@@ -48,7 +48,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY= os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     'localhost',
