@@ -2,7 +2,7 @@
 
 ![Site view across devices](static/images/readme_images/amiresponsive.png)
 
-The Food Frontier is a place for those enthusiastic and passionate about food. It consists of three major pages, the Home page which includes a variety of food based articles, an About page which describes the blogs purpose and a Recipes page which can be accessed by Registered users exclusively. It allows the user to interact with the blog and even contribute to it by adding their own recipes and comments to posts.
+The Food Frontier is a place for those enthusiastic and passionate about food. It consists of three major pages, the Home page which includes a variety of food based articles, an About page which describes the blogs purpose and a Recipes page which can be accessed by Registered users exclusively. It allows the user to interact with the blog and even contribute to it by adding their own recipes.
 
 The deployed link of The Food Frontier can be found [here](https://the-food-frontier-ff520c1682a7.herokuapp.com/)
 
@@ -32,21 +32,18 @@ Each page of the blog is displayed clearly through a navbar which offers the use
 #### As an admin:
 1. I can have access to the admin panel in order to create posts and recipes to populate the Home and Recipes page.
 2. I can access posts pending for approval and approve or dissapprove them depending on the content.
-3. I can access comments pending for approval and approve or dissapprove them.
-4. I can access recipes pending for approval and approve or dissapprove them.
-5. I can have full CRUD functionality to all posts, comments and recipes.
+3. I can access recipes pending for approval and approve or dissapprove them.
+4. I can have full CRUD functionality to all posts and recipes.
 
 #### As a user:
-1. I can create an account in order to have full access to the blog (Posts, Commenting, Recipes and Recipe Form).
+1. I can create an account in order to have full access to the blog (Posts, Recipes and Recipe Form).
 2. I can open a post by clicking on it.
-3. I can comment on a post and express my opinion.
-4. I can modify or delete a comment created by me.
-5. I can create a recipe by submitting the recipe form for approval.
-6. I can access all recipes created by me, approved or not, to either modify or delete them(CRUD).
-7. I can access the about page in order to find out more about the food blog.
-8. I can access the recipes page which included recipes written by other users too.
-9. I can access recipes written by me on the My Recipes tab.
-10. I can filter recipes depending on which cuisine they're at by choosing a cuisine from the dropdown menu.
+3. I can create a recipe by submitting the recipe form for approval.
+4. I can access all recipes created by me, approved or not, to either modify or delete them(CRUD).
+5. I can access the about page in order to find out more about the food blog.
+6. I can access the recipes page which included recipes written by other users too.
+7. I can access recipes written by me on the My Recipes tab.
+8. I can filter recipes depending on which cuisine they're at by choosing a cuisine from the dropdown menu.
 
 ## Design 
 ### Wireframes:
@@ -160,7 +157,6 @@ The font element is obsolete.(While true, this error was caused by Summernote du
 - style.css passed through the W3C CSS validator withour any errors or warnings ✅
 
 #### Scripts:
-- comments.js passed through the JSHint linter without any errors ✅
 - delete_recipes.js passed through the JSHint linter without any errors ✅
 
 #### Python files:
@@ -170,7 +166,6 @@ The font element is obsolete.(While true, this error was caused by Summernote du
 
 ##### blog app folder
 - admin.py passed through the CI Python Linter without any errors ✅
-- forms.py passed through the CI Python Linter without any errors ✅
 - models.py passed through the CI Python Linter without any errors ✅
 - urls.py passed through the CI Python Linter without any errors ✅
 - views.py passed through the CI Python Linter without any errors ✅
