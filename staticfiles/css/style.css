@@ -11,25 +11,58 @@ body {
     color: var(--text-color);
 }
 
+/* Navbar Styling */
 .navbar {
     background-color: var(--primary-color) !important;
     font-size: 1.2rem;
     padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
+/* Navbar Brand (Website Title) */
 .navbar-brand {
-    font-size: 2rem;
+    font-size: 2rem; /* Default size */
     font-weight: bold;
     color: white !important;
+    text-align: center;
+    flex-grow: 1;
 }
 
+/* Navbar Toggler (Dropdown Button) */
+.navbar-toggler {
+    position: absolute;
+    right: 15px; /* Adjust position to prevent overlap */
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    font-size: 1.8rem;
+    color: white;
+}
+
+/* Navbar Links */
 .navbar-nav .nav-link {
     color: white !important;
     font-weight: bold;
+    padding: 10px 15px;
 }
 
-.navbar-nav .nav-link:hover {
-    color: var(--accent-color) !important;
+/* Align Items in Navbar */
+.navbar-collapse {
+    justify-content: center;
+}
+
+/* Dropdown menu */
+.navbar-nav {
+    text-align: center;
+    width: 100%;
+}
+
+/* Align dropdown items centrally */
+.navbar-nav .nav-item {
+    width: 100%;
 }
 
 .card {
@@ -274,30 +307,47 @@ body {
 
 /* Responsive Design */
 
-/* Responsive Layout for Mobile Screens */
-@media screen and (max-width: 425px) {
-    .recipe_btns {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
+/* Ensure Navbar Doesn't Collapse for Tablets & Larger Screens */
+@media (min-width: 426px) {
+    .navbar-expand-md .navbar-collapse {
+        display: flex !important;
+        flex-basis: auto;
     }
 
-    .recipe_btns .btn {
-        width: 100%;
-        text-align: center;
+    .navbar-expand-md .navbar-toggler {
+        display: none; /* Hide toggle button for larger screens */
     }
 }
 
+
+/* Enable Navbar Collapse Only on Small Screens (≤ 425px) */
 @media (max-width: 425px) {
+    .navbar {
+        padding: 0.8rem 1rem; /* Reduce padding */
+    }
+
     .navbar-brand {
-        font-size: 1.5rem;
-        display: block;
+        font-size: 1.5rem; /* Make title smaller */
         text-align: center;
-        width: 100%;
+        flex-grow: 1;
+    }
+
+    .navbar-toggler {
+        font-size: 1.5rem; /* Reduce button size */
+        right: 15px; /* Adjust position */
+    }
+
+    .navbar-collapse {
+        text-align: center;
     }
 
     .navbar-nav {
-        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-nav .nav-item {
         width: 100%;
     }
 }
