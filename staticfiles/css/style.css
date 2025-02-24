@@ -311,9 +311,14 @@ body {
 
 /* Ensure Navbar Doesn't Collapse for Tablets & Larger Screens */
 @media (min-width: 426px) {
+    .navbar-nav {
+        flex-direction: row;
+    }
+    
     .navbar-expand-md .navbar-collapse {
         display: flex !important;
         flex-basis: auto;
+        justify-content: center !important;
     }
 
     .navbar-expand-md .navbar-toggler {
@@ -371,6 +376,7 @@ body {
         width: 100%;
     }
 }
+
 
 @media screen and (min-width:768px) {
     .navbar {
