@@ -130,6 +130,9 @@ Pexels was used for all images available on the website (see reference section).
 #### Social Media Links:
 ![Social-Media-Links](static/images/readme_images/social-media-links.png)
 
+### Removed Features:
+- Removed post comments, this was code taken from the Codestar walkthrough and since it was not working on the initial submission I have decided to remove it, I would have fixed it if it was part of my custom model but since it was taken from another project and was not functional I decided to remove completely for the time being. 
+
 ### Future Features:
 - Add a favourite button to recipes and a section where favourited will go.
 - Add alphabetical order filtering.
@@ -222,7 +225,7 @@ The font element is obsolete.(While true, this error was caused by Summernote du
 
 ## Technologies Used
 
-## Implementations for Submission
+## Implementations for Re-submission
 - SECRET_KEY previously exposed is now changed, stored in a .env file which is included in the .gitignore file. The settings.py file with the exposed SECRET_KEY has been successfuly deleted and history rewritten without any errors.
 
 - Comment's section removed since it was not an original and not functional hence unnecessary to include in the project for submission.
@@ -236,35 +239,65 @@ The font element is obsolete.(While true, this error was caused by Summernote du
 - SQL - Postgres
 
 ### Installed packages:
-- asgiref==3.8.1
-- cloudinary==1.36.0
-- crispy-bootstrap5==0.7
-- dj-database-url==0.5.0
-- dj3-cloudinary-storage==0.0.6
-- Django==4.2.13
-- django-allauth==0.57.2
-- django-crispy-forms==2.2
-- django-summernote==0.8.20.0
-- beautifulsoup4
-- gunicorn==20.1.0
-- oauthlib==3.2.2
-- psycopg2==2.9.9
-- PyJWT==2.8.0
-- python3-openid==3.2.0
-- requests-oauthlib==2.0.0
-- sqlparse==0.5.0
-- urllib3==1.26.19
-- whitenoise==5.3.0
+asgiref==3.8.1
+beautifulsoup4==4.13.3
+bleach==6.2.0
+certifi==2025.1.31
+cffi==1.17.1
+charset-normalizer==3.4.1
+cloudinary==1.36.0
+crispy-bootstrap5==0.7
+cryptography==44.0.1
+defusedxml==0.7.1
+dj-database-url==0.5.0
+dj3-cloudinary-storage==0.0.6
+Django==4.2.13
+django-allauth==0.57.2
+django-crispy-forms==2.2
+django-summernote==0.8.20.0
+gunicorn==20.1.0
+idna==3.10
+oauthlib==3.2.2
+psycopg2==2.9.10
+psycopg2-binary==2.9.10
+pycparser==2.22
+PyJWT==2.8.0
+python-dotenv==1.0.1
+python3-openid==3.2.0
+requests==2.32.3
+requests-oauthlib==2.0.0
+setuptools==75.8.0
+six==1.17.0
+soupsieve==2.6
+sqlparse==0.5.0
+typing_extensions==4.12.2
+urllib3==1.26.19
+webencodings==0.5.1
+whitenoise==5.3.0
 
 
 ## Deployment:
 The Food Frontier was deployed using Heroku. Deployment steps:
 - Install asgiref:
 ``` pip3 install asgiref==3.8.1 ```
+- Install bautifulsoup4:
+``` pip3 install beautifulsoup4==4.13.3 ```
+- Install bleach:
+``` pip3 install bleach==6.2.0 ```
+- Install certifi:
+``` pip3 install certifi==2025.1.31 ```
+- Install cffi:
+``` pip3 install cffi==1.17.1 ```
+- Install charset-normalizer:
+``` pip3 install charset-normalizer==3.4.1 ```
 - Install cloudinary:
 ``` pip3 install cloudinary==1.36.0 ```
 - Install crispy-bootstrap5:
 ``` pip3 install crispy-bootstrap5==0.7 ```
+- Install cryptohraphy:
+``` pip3 install cryptography==44.0.1 ```
+- Install defusedxml:
+``` pip3 install defusedxml==0.7.1 ```
 -  Install dj-database-url:
 ``` pip3 install dj-database-url==0.5.0 ```
 - Install dj3-cloudinary-storage:
@@ -277,24 +310,42 @@ The Food Frontier was deployed using Heroku. Deployment steps:
 ``` pip3 install django-crispy-forms==2.2 ```
 - Install django-summernote:
 ``` pip3 install django-summernote==0.8.20.0 ```
-- Install beautifulsoup4:
-``` pip3 install beautifulsoup4 ```
 - Install guinicorn:
 ``` pip3 install gunicorn==20.1.0 ```
+- Install idna:
+``` pip3 install idna==3.10 ```
 - Install oauthlib:
 ``` pip3 install oauthlib==3.2.2 ```
 - Install psycopg2:
-``` pip3 install psycopg2==2.9.9 ``` 
+``` pip3 install psycopg2==2.9.10 ``` 
+- Install psycopg-binary:
+``` pip3 install psycopg2-binary==2.9.10```
+- Install pycparser:
+``` pip3 install pycparser==2.22```
 - Install PyJWT:
 ``` pip3 install PyJWT==2.8.0 ```
+- Install python-dotenv:
+``` pip3 install python-dotenv==1.0.1 ```
 - Install python3-openid:
 ``` pip3 install python3-openid==3.2.0 ```
+- Install requests:
+``` pip3 install requests==2. ```
 - Install requests-oauthlib:
 ``` pip3 install requests-oauthlib==2.0.0 ```
+- Install setuptools:
+``` pip3 install setuptools==75.8.0 ```
+- Install six:
+``` pip3 install six==1.17.0 ```
+- Install soupsieve:
+``` pip3 install soupsieve==2.6 ```
 - Install sqlparse:
 ``` pip3 install sqlparse==0.5.0 ```
+- Install typing_extensions:
+``` pip3 install sqlparse==4.12.2 ```
 - Install urllib3:
 ``` pip3 install urllib3==1.26.19 ```
+- Install webencodings:
+``` pip3 install webencodings==0.5.1 ```
 - Install whitenoise:
 ``` pip3 install whitenoise==5.3.0 ```
 
@@ -321,13 +372,16 @@ The changes were migrated using ```python3 manage.py migrate```
 - Go to the settings tab and click on reveal config vars.
 - On the KEY, VALUE pairs add the following keys:
 
-    1. CLOUDINARY_URL : API environment variable
-    2. DATABASE_URL : assigned value from Heroku
-    3. SECRET_KEY : add secret key of choice
+    1. DATABASE_URL : assigned value from Heroku
+    2. SECRET_KEY : add secret key of choice
+    3. CLOUDINARY_CLOUD_NAME : Cloud name variable
+    4. CLOUDINARY_API_KEY : API environment variable pk
+    5. CLOUDINARY_API_SECRET : API environment variable sk
 
 
-- Include CLOUDINARY_URL, DATABASE_URL and SECRET_KEY to env.py and settings.py file.
-- Include import os to the env.py file.
+- Include DATABASE_URL, SECRET_KEY, CLOUDINARY_CLOUD_NAME, CLOUDINARY_API_KEY, CLOUDINARY_API_KEY to .env and settings.py file.
+- Include import os to settings.py file.
+- Add 'from dotenv import load_dotenv' and call load_dotenv() underneath it.
 - Include Heroku to allowed hosts in settings.py file.
 - Push to Github
 - Connect app to project repository and push.
