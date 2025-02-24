@@ -301,6 +301,14 @@ body {
 
 /* Responsive Design */
 
+@media (max-width: 320px) {
+    .navbar-toggler {
+        font-size: 1.3rem !important; /* Reduce icon size */
+        padding: 4px 6px !important; /* Adjust button padding */
+    }
+}
+
+
 /* Ensure Navbar Doesn't Collapse for Tablets & Larger Screens */
 @media (min-width: 426px) {
     .navbar-expand-md .navbar-collapse {
