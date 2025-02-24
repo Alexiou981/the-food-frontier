@@ -316,6 +316,7 @@ body {
     }
     
     .navbar-expand-md .navbar-collapse {
+        font-size: small;
         display: flex !important;
         flex-basis: auto;
         justify-content: center !important;
