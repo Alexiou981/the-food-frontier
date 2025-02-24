@@ -93,23 +93,22 @@ def recipes_detail(request, slug):
 
 @login_required
 def users_recipe(request):
-
     if request.method == "POST":
         recipe_form = RecipeForm(data=request.POST)
         if recipe_form.is_valid():
             recipe = recipe_form.save(commit=False)
             recipe.author = request.user
             recipe_form.save()
-            messages.add_message(request, messages.SUCCESS,
-                                 "Recipe submitted and is awaiting approval")
-    recipe_form = RecipeForm()
+            messages.success(request, "Recipe submitted and is awaiting approval.")
+            return redirect("recipes")  # Redirect to prevent reloading issues
+
+    else:
+        recipe_form = RecipeForm()
 
     return render(
         request,
         "recipes/recipe_form.html",
-        {
-            "recipe_form": recipe_form
-        }
+        {"recipe_form": recipe_form}
     )
 
 

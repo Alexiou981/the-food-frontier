@@ -10,7 +10,9 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/0d17f269bd.js" crossorigin="anonymous"></script>
@@ -26,29 +28,42 @@
 </head>
 
 <body class="d-flex flex-column h-100">
-    
-<!-- Navbar -->
-<nav class="navbar navbar-expand-md">
-    <div class="container">
-        <a class="navbar-brand" href="{% url 'home' %}">The Food Frontier</a>
-        <button class="navbar-toggler d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link px-3" href="{% url 'home' %}">Home</a></li>
-                <li class="nav-item"><a class="nav-link px-3" href="{% url 'recipes' %}">Recipes</a></li>
-                <li class="nav-item"><a class="nav-link px-3" href="{% url 'about' %}">About</a></li>
-                {% if user.is_authenticated %}
-                <li class="nav-item"><a class="nav-link px-3" href="{% url 'account_logout' %}">Logout</a></li>
-                {% else %}
-                <li class="nav-item"><a class="nav-link px-3" href="{% url 'account_login' %}">Login</a></li>
-                <li class="nav-item"><a class="nav-link px-3" href="{% url 'account_signup' %}">Register</a></li>
-                {% endif %}
-            </ul>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'home' %}">The Food Frontier</a>
+            <button class="navbar-toggler d-md-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link px-3" href="{% url 'home' %}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="{% url 'recipes' %}">Recipes</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="{% url 'about' %}">About</a></li>
+                    {% if user.is_authenticated %}
+                    <li class="nav-item"><a class="nav-link px-3" href="{% url 'account_logout' %}">Logout</a></li>
+                    {% else %}
+                    <li class="nav-item"><a class="nav-link px-3" href="{% url 'account_login' %}">Login</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="{% url 'account_signup' %}">Register</a></li>
+                    {% endif %}
+                </ul>
+            </div>
         </div>
+    </nav>
+
+    <!-- Flash Messages -->
+    {% if messages %}
+    <div class="container mt-3">
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endfor %}
     </div>
-</nav>
+    {% endif %}
 
 
     <!-- Main Content -->
@@ -60,8 +75,10 @@
     <footer class="footer mt-auto">
         <p>Made by Evangelos Alexiou for Educational Purposes.</p>
         <p class="sm-links">
-            <a href="https://github.com/Alexiou981" target="_blank" class="footer-icon"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/evangelos-alexiou-b88759132/" target="_blank" class="footer-icon"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/Alexiou981" target="_blank" class="footer-icon"><i
+                    class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/evangelos-alexiou-b88759132/" target="_blank" class="footer-icon"><i
+                    class="fa-brands fa-linkedin"></i></a>
         </p>
     </footer>
 

@@ -137,6 +137,44 @@ body {
     margin-bottom: 1rem;
 }
 
+.recipe-mod-btns {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Space between buttons */
+    margin-top: 20px;
+}
+
+.btn-edit {
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn-edit:hover {
+    background-color: var(--accent-color);
+    color: black;
+}
+
+.btn-delete {
+    background-color: #dc3545; /* Bootstrap danger color */
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn-delete:hover {
+    background-color: #a71d2a; /* Darker red for hover effect */
+    color: white;
+}
+
+
 /* Ensuring consistency with buttons in recipes.html */
 .users_recipes {
     display: flex;

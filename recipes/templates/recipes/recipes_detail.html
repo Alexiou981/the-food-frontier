@@ -44,7 +44,7 @@
     <div class="recipe-mod-btns text-center mt-3">
         <a href="{% url 'recipe_edit' slug=recipe.slug %}" class="btn btn-edit">Edit Recipe</a>
         <button class="btn btn-delete" data-bs-toggle="modal" data-bs-target="#deleteModal">Delete Recipe</button>
-    </div>
+    </div>    
     {% endif %}  
     <div class="row">
         <div class="col card mb-4 mt-3">
@@ -75,7 +75,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <a id="deleteConfirm" href="{% url 'delete_recipe' recipe.slug %}" class="btn btn-danger">Delete</a>
+        <a id="deleteConfirm" href="{% url 'delete_recipe' recipe.slug %}" class="btn btn-delete">Delete</a>
       </div>
     </div>
   </div>
