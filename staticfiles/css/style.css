@@ -352,6 +352,24 @@ body {
     .navbar-nav .nav-item {
         width: 100%;
     }
+
+    .recipe_btns {
+        display: flex;
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center; /* Center align buttons */
+        gap: 10px; /* Add spacing between buttons */
+        width: 100%; /* Ensure it takes full width */
+    }
+
+    .recipe_btns .btn,
+    .recipe_btns .dropdown {
+        width: 100%; /* Make buttons a bit wider */
+        text-align: center;
+    }
+
+    .dropdown-menu {
+        width: 100%;
+    }
 }
 
 @media screen and (min-width:768px) {
