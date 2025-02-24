@@ -54,12 +54,6 @@ body {
     justify-content: center;
 }
 
-/* Dropdown menu */
-.navbar-nav {
-    text-align: center;
-    width: 100%;
-}
-
 /* Align dropdown items centrally */
 .navbar-nav .nav-item {
     width: 100%;
@@ -353,9 +347,25 @@ body {
 }
 
 @media screen and (min-width:768px) {
-    .navbar > .container-fluid {
-        margin-left: 4%;
-        margin-right: 4%;
+    .navbar {
+        padding: 0.8rem 0 !important; /* Reduce navbar padding for better spacing */
+    }
+
+    .navbar-collapse {
+        justify-content: flex-end !important; /* Push navbar items to the right */
+    }
+
+    .navbar-nav {
+        gap: 10px !important; /* Reduce space between navbar items */
+    }
+
+    .navbar-nav .nav-item {
+        margin: 0 !important; /* Remove unwanted margins */
+    }
+
+    .navbar-nav .nav-link {
+        padding: 5px 12px !important; /* Adjust navbar link padding for a compact look */
+        font-size: 1rem !important; /* Ensure text is the right size */
     }
 }
 
