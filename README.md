@@ -237,13 +237,85 @@ The font element is obsolete.(While true, this error was caused by Summernote du
     ![about-views-test](static/images/readme_images/testing/about_views_test.png)
 
 ### Responsiveness
-- Home page tested responsive from 320px to 2560 px and all elements respond appropriately ✅
-- Post Detail page tested responsive from 320px to 2560 px and all elements respond appropriately ✅
-- Recipes page tested responsive from 320px to 2560 px and all elements respond appropriately ✅
-- Recipe Detail page tested responsive from 320px to 2560 px and all elements respond appropriately ✅
-- Recipe Form tested responsive from 320px to 2560 px and all elements respond appropriately ✅
-- My Recipes page tested responsive from 320px to 2560 px and all elements respond appropriately ✅
-- Filtered Recipes page tested responsive from 320px to 2560 px and all elements respond appropriately ✅
+#### Home page tested responsive from 320px to 2560 px and all elements respond appropriately ✅
+##### Mobile Screens (max-width: 425px)
+![home-mobile](static/images/readme_images/responsiveness/home_mobile.png)
+
+##### Between Mobile and Tablet Screens (min-width: 426px, max-width:767px)
+![btw-mb-tb](static/images/readme_images/responsiveness/btw_mb_tb.png)
+
+##### Between Tablet and Laptop Screens (min-width: 768px, max-width:991px)
+![btw-tb-lp](static/images/readme_images/responsiveness/btw_tb_lp.png)
+
+##### Laptop and Larger Screens (min-width: 992px)
+![lp-larger](static/images/readme_images/responsiveness/lp_larger.png)
+
+#### Post Detail page tested responsive from 320px to 2560 px and all elements respond appropriately ✅
+
+##### Mobile Screens (max-width: 425px)
+![ptd-mb](static/images/readme_images/responsiveness/ptd_mb.png)
+
+##### Between Tablet and Laptop Screens (min-width: 768px, max-width:991px)
+![ptd_tb](static/images/readme_images/responsiveness/ptd_tb.png)
+
+##### Laptop and Larger Screens (min-width: 992px)
+![ptd-lg](static/images/readme_images/responsiveness/ptd_lg.png)
+
+#### Recipes page tested responsive from 320px to 2560 px and all elements respond appropriately ✅
+
+##### Mobile Screens (max-width: 425px)
+![ptd-mb](static/images/readme_images/responsiveness/recipes_mb.png)
+
+##### Between Tablet and Laptop Screens (min-width: 768px, max-width:991px)
+![recipes-tb](static/images/readme_images/responsiveness/recipes_tb.png)
+
+##### Laptop and Larger Screens (min-width: 992px)
+![recipes-lg](static/images/readme_images/responsiveness/recipes_lg.png)
+
+#### Recipe Detail page tested responsive from 320px to 2560 px and all elements respond appropriately ✅
+
+##### Mobile Screens (max-width: 425px)
+![recipe-dt-mb](static/images/readme_images/responsiveness/recipes_dt_mb.png)
+
+##### Between Tablet and Laptop Screens (min-width: 768px, max-width:991px)
+![recipes-dt-tb](static/images/readme_images/responsiveness/recipes_dt_tb.png)
+
+##### Laptop and Larger Screens (min-width: 992px)
+![recipes-dt-lg](static/images/readme_images/responsiveness/recipes_dt_lg.png)
+
+#### Recipe Form tested responsive from 320px to 2560 px and all elements respond appropriately ✅
+
+##### Mobile Screens (max-width: 425px)
+![recipe-form-mb](static/images/readme_images/responsiveness/recipe_form_mb.png)
+
+##### Between Tablet and Laptop Screens (min-width: 768px, max-width:991px)
+![recipe-form-tb](static/images/readme_images/responsiveness/recipe_form_tb.png)
+
+##### Laptop and Larger Screens (min-width: 992px)
+![recipe-form-lg](static/images/readme_images/responsiveness/recipe_form_lg.png)
+
+#### My Recipes page tested responsive from 320px to 2560 px and all elements respond appropriately ✅
+
+##### Mobile Screens (max-width: 425px)
+![my-recipes-mb](static/images/readme_images/responsiveness/my_recipes_mb.png)
+
+##### Between Tablet and Laptop Screens (min-width: 768px, max-width:991px)
+![my-recipes-tb](static/images/readme_images/responsiveness/my_recipes_tb.png)
+
+##### Laptop and Larger Screens (min-width: 992px)
+![my-recipes-lg](static/images/readme_images/responsiveness/my_recipes_lg.png)
+
+#### Filtered Recipes page tested responsive from 320px to 2560 px and all elements respond appropriately ✅
+
+##### Mobile Screens (max-width: 425px)
+![filtered-recipes-mb](static/images/readme_images/responsiveness/filtered_recipes_mb.png)
+
+##### Between Tablet and Laptop Screens (min-width: 768px, max-width:991px)
+![filtered-recipes-tb](static/images/readme_images/responsiveness/filtered_recipes_tb.png)
+
+##### Laptop and Larger Screens (min-width: 992px)
+![filtered-recipes-lg](static/images/readme_images/responsiveness/filtered_recipes_lg.png)
+
 
 ### CRUD 
 - Logged in user can successfully create a custom recipe ✅
