@@ -3,6 +3,7 @@
     --accent-color: #FFD700; /* Bright Yellow */
     --background-color: #FFF5E1; /* Creamy White */
     --text-color: #333333; /* Dark Grey */
+    --post-bg-color: #D9A273; /* Soft Tan Color */
 }
 
 body {
@@ -60,16 +61,17 @@ body {
 }
 
 .card {
-    border: none;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    background: rgba(217, 162, 115, 0.2); /* New color with 20% opacity */
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
-    background-color: transparent;
-    height: 90%;
-    min-height:350px;
 }
 
+/* Hover effect for better interaction */
 .card:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
+    background: rgba(217, 162, 115, 0.3); /* Slightly darker on hover */
 }
 
 .card-title {
