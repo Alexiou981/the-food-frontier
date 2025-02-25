@@ -99,7 +99,9 @@ def users_recipe(request):
             recipe = recipe_form.save(commit=False)
             recipe.author = request.user
             recipe_form.save()
-            messages.success(request, "Recipe submitted and is awaiting approval.")
+            messages.success(
+                request,
+                "Recipe submitted and is awaiting approval.")
             return redirect("recipes")  # Redirect to prevent reloading issues
 
     else:
