@@ -317,13 +317,13 @@ The font element is obsolete.(While true, this error was caused by Summernote du
 ![filtered-recipes-lg](static/images/readme_images/responsiveness/filtered_recipes_lg.png)
 
 
-### CRUD 
+### CRUD Functionality Manual Testing
 - Logged in user can successfully create a custom recipe ✅
 - Logged in user can successfully access a pre-existing and a custom recipe ✅
 - Logged in user can successfully edit a recipe whether approved or not ✅
 - Logged in user can successfully delete a recipe ✅
 
-### Features
+### Features Functionality Manual Testing
 - Navbar links work as expected ✅
 - Clicking on a post directs the user to the post-detail page ✅
 - Clicking on a recipe directs the user to the recipe-detail page ✅
@@ -333,7 +333,7 @@ The font element is obsolete.(While true, this error was caused by Summernote du
 - My recipes page works as expected and only appears for logged-in users ✅
 - Login/logout and register pages work as expected ✅
 
-### Authentication
+### Authentication Manual Testing
 - Recipes tab only appear on the navbar for logged-in user ✅
 - If user not logged in navbar includes Register and Login pages ✅
 - If user logged in navbar includes only Logout page ✅
