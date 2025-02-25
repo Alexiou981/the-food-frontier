@@ -147,44 +147,94 @@ Pexels was used for all images available on the website (see reference section).
 #### Templates:
 - base.html passed through HTML validator withour errors or warnings ✅
 - index.html passed through HTML validator withour errors or warnings ✅
+    #### Base and Index templates validation
+    ![home-test](static/images/readme_images/testing/home_test.png)
 - about.html passed through HTML validator withour errors or warnings ✅
+    #### About template validation
+    ![about-test](static/images/readme_images/testing/about_test.png)
 - recipes.html passed through HTML validator withour errors or warnings ✅
+    #### Recipes template validation
+    ![recipes-test](static/images/readme_images/testing/recipes_test.png)
 - recipes_detail.html passed through HTML validator withour errors or warnings ✅
+    #### Recipe details template validation     
+    ![recipe-dt-test](static/images/readme_images/testing/recipe_dt_test.png)   
 - my_recipes.html passed through HTML validator withour errors or warnings ✅
+    #### My Recipes template validation
+    ![my-recipes-test](static/images/readme_images/testing/my_recipes_test.png)
 - filtered_cuisines.html passed through HTML validator withour errors or warnings ✅
+    #### Filtered Recipes template validation
+    ![fitlered-recipes-test](static/images/readme_images/testing/filtered_recipes_test.png)
 - recipe_form.html passed through HTML validator withour errors or warnings ✅
+    #### Recipe Form template validation
+    ![form-test](static/images/readme_images/testing/form_test.png)
 - post-detail.html passed through HTML validator with the following error:
 The font element is obsolete.(While true, this error was caused by Summernote due to choosing a font when submitting the recipes from the admin panel to populate the page. The font family of the body is set as 'Poppins' inside the style.css file.)
+    #### Post Details template validation
+    ![post-dt-test](static/images/readme_images/testing/post_dt_test.png)
 
 #### Stylesheets:
 - style.css passed through the W3C CSS validator withour any errors or warnings ✅
+    #### style.css validation
+    ![style-test](static/images/readme_images/testing/style_test.png)
 
 #### Scripts:
 - delete_recipes.js passed through the JSHint linter without any errors ✅
+    #### Delete Recipe script validation
+    ![delete-rp-test](static/images/readme_images/testing/delete_rp_test.png)
 
 #### Python files:
 ##### the_food_frontier project folder
 - settings.py passed through the CI Python Linter without any errors ✅
+    #### Settings file validation
+    ![settings-test](static/images/readme_images/testing/settings_test.png)
 - urls.py passed through the CI Python Linter without any errors ✅
+    #### Project urls file validation
+    ![project-urls-test](static/images/readme_images/testing/project_urls_test.png)
 
 ##### blog app folder
 - admin.py passed through the CI Python Linter without any errors ✅
+    #### blog/admin validation 
+    ![blog-admin-test](static/images/readme_images/testing/blog_admin_test.png)
 - models.py passed through the CI Python Linter without any errors ✅
+    #### blog/models validation 
+    ![blog-models-test](static/images/readme_images/testing/blog_models_test.png)
 - urls.py passed through the CI Python Linter without any errors ✅
+    #### blog/urls validation 
+    ![blog-urls-test](static/images/readme_images/testing/blog_urls_test.png)
 - views.py passed through the CI Python Linter without any errors ✅
+    #### blog/views validation 
+    ![blog-views-test](static/images/readme_images/testing/blog_views_test.png) 
 
 ##### recipes app folder
 - admin.py passed through the CI Python Linter without any errors ✅
+    #### recipes/admin validation 
+    ![recipes-admin-test](static/images/readme_images/testing/recipes_admin_test.png)
 - forms.py passed through the CI Python Linter without any errors ✅
+    #### recipes/forms validation 
+    ![recipes-form-test](static/images/readme_images/testing/recipes_form_test.png)
 - models.py passed through the CI Python Linter without any errors ✅
+    #### recipes/models validation 
+    ![recipes-models-test](static/images/readme_images/testing/recipes_models_test.png)
 - urls.py passed through the CI Python Linter without any errors ✅
+    #### recipes/urls validation 
+    ![recipes-urls-test](static/images/readme_images/testing/recipes_urls_test.png)
 - views.py passed through the CI Python Linter without any errors ✅
+    #### recipes/views validation 
+    ![recipes-views-test](static/images/readme_images/testing/recipes_views_test.png)
 
 ##### about app folder
 - admin.py passed through the CI Python Linter without any errors ✅
+    #### about/admin validation 
+    ![about-admin-test](static/images/readme_images/testing/about_admin_test.png)
 - models.py passed through the CI Python Linter without any errors ✅
+    #### about/models validation 
+    ![about-models-test](static/images/readme_images/testing/about_models_test.png)
 - urls.py passed through the CI Python Linter without any errors ✅
+    #### about/urls.py validation 
+    ![about-urls.py-test](static/images/readme_images/testing/about_urls_test.png)
 - views.py passed through the CI Python Linter without any errors ✅
+    #### about/views validation 
+    ![about-views-test](static/images/readme_images/testing/about_views_test.png)
 
 ### Responsiveness
 - Home page tested responsive from 320px to 2560 px and all elements respond appropriately ✅
